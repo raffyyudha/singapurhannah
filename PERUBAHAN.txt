@@ -1,0 +1,63 @@
+═══════════════════════════════════════════════════════════════
+                    CATATAN PERUBAHAN
+                      MOONPETS WEBSITE
+═══════════════════════════════════════════════════════════════
+
+📅 Tanggal: 17 Oktober 2025
+
+✅ PERUBAHAN YANG SUDAH DILAKUKAN:
+
+1. REBRANDING DARI BARK SHOP KE MOONPETS
+   ✓ Title website: "MoonPets"
+   ✓ Meta tags (description, og:title, twitter:title)
+   ✓ Konten "About Us"
+   ✓ Testimonial pelanggan
+   ✓ Semua dokumentasi (README, PANDUAN-EDIT, MULAI-DISINI)
+
+2. PERBAIKAN GAMBAR
+   ✓ Menghapus srcset yang memerlukan file multi-resolusi
+   ✓ Menggunakan gambar -p-800.jpg yang tersedia
+   ✓ Semua gambar header sekarang muncul dengan benar
+   ✓ Gambar testimonial diperbaiki
+
+3. FILE YANG DIUPDATE:
+   ✓ index.html - Semua nama dan gambar
+   ✓ README.md - Judul dan kontak
+   ✓ PANDUAN-EDIT.md - Judul
+   ✓ MULAI-DISINI.txt - Header
+
+═══════════════════════════════════════════════════════════════
+
+🎯 HASIL:
+
+Website sekarang sudah:
+• Menggunakan nama "MoonPets" di semua tempat
+• Semua gambar muncul dengan benar
+• Siap untuk diedit lebih lanjut
+• Struktur folder rapi dan terorganisir
+
+═══════════════════════════════════════════════════════════════
+
+📝 CATATAN PENTING:
+
+• Gambar menggunakan resolusi 800px (optimal untuk web)
+• Responsive srcset dihapus untuk kesederhanaan
+• Semua file gambar ada di folder assets/images/
+• Logo masih menggunakan nama "Bark-Shop-Logo.svg" 
+  (bisa diganti nanti dengan logo MoonPets)
+
+═══════════════════════════════════════════════════════════════
+
+🚀 LANGKAH SELANJUTNYA (OPSIONAL):
+
+1. Ganti logo dengan logo MoonPets baru
+2. Update warna brand sesuai identitas MoonPets
+3. Ganti foto-foto dengan foto yang lebih sesuai
+4. Update informasi kontak jika ada perubahan
+5. Update link booking system jika berbeda
+
+═══════════════════════════════════════════════════════════════
+
+Website MoonPets siap digunakan! 🎉
+
+═══════════════════════════════════════════════════════════════
