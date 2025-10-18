@@ -7,12 +7,59 @@
     <meta content="Explore our grooming packages for dogs, cats, rabbits, and guinea pigs. Professional pet grooming services with various package options." name="description" />
     <meta content="Grooming Packages - Huggs Pawly" property="og:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <style>
+        /* Footer styling - BLACK background WHITE text */
+        .footer {
+            background-color: #000 !important;
+        }
+        
+        .footer .nav-link,
+        .footer a,
+        .footer-links-container a {
+            color: #fff !important;
+        }
+        
+        .footer .nav-link:hover,
+        .footer a:hover {
+            color: #ccc !important;
+        }
+        
+        .footer-grid {
+            background-color: transparent !important;
+        }
+        
+        .footer .short-fur-pattern {
+            opacity: 0.1;
+        }
+        
+        .social-links img,
+        .social-links svg {
+            filter: brightness(0) invert(1);
+        }
+        
+        /* Keep logo on the left */
+        .footer-links-container:first-child {
+            justify-content: flex-start !important;
+        }
+        /* Clean & Professional Design */
+        body {
+            background-color: #fff !important;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+        
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+        
         .pricing-section {
             padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #fff;
         }
         
         .pricing-header {
@@ -22,13 +69,15 @@
         
         .pricing-header h1 {
             font-size: 2.5em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
         }
         
+        /* Pricing cards - Cream background */
         .pricing-category {
             margin-bottom: 80px;
-            background: #fff;
+            background: #F5E6D3;
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -36,57 +85,58 @@
         
         .category-title {
             font-size: 2em;
-            color: #b8824f;
+            color: #8B6F47;
             text-align: center;
             margin-bottom: 30px;
             font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
         }
         
+        /* Tables - WHITE background with dark text */
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
-            border: 2px solid #b8824f;
-            overflow-x: auto;
-            display: block;
-        }
-        
-        .pricing-table thead,
-        .pricing-table tbody {
-            display: table;
-            width: 100%;
+            border: 1px solid #ddd;
+            table-layout: auto;
+            background: #fff;
         }
         
         .pricing-table th {
-            background: #b8824f;
-            color: white;
-            padding: 12px 10px;
+            background: #8B6F47;
+            color: #fff;
+            padding: 15px 20px;
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9em;
-            border: 1px solid #a67643;
+            font-size: 1em;
+            border: 1px solid #ddd;
             vertical-align: middle;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .pricing-table th:first-child {
             text-align: left;
-            min-width: 150px;
+            padding-left: 30px;
+            width: 30%;
         }
         
         .pricing-table td {
-            padding: 12px 10px;
+            padding: 15px 20px;
             border: 1px solid #ddd;
-            font-size: 0.9em;
-            background: white;
+            font-size: 1em;
+            background: #fff;
+            color: #000;
             text-align: center;
             vertical-align: middle;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .pricing-table td:first-child {
             text-align: left;
+            padding-left: 30px;
             font-weight: 600;
-            color: #5a3d8a;
+            color: #8B6F47;
         }
         
         .pricing-table tbody tr:hover {
@@ -149,15 +199,21 @@
         
         .service-description {
             font-size: 0.9em;
-            color: #666;
+            color: #fff;
             margin-top: 20px;
             padding: 20px;
-            background: #f5f5f5;
+            background: #000;
             border-radius: 10px;
         }
         
         .service-description strong {
-            color: #333;
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .service-description p {
+            color: #fff;
+            line-height: 1.6;
         }
         
         .add-on-section {
@@ -253,16 +309,17 @@
             <div class="nav-grid-container">
                 <div id="w-node-da75a56e-7b3b-26b8-c721-a123e3e4a8ff-67d5300b">
                     <a href="index.html" class="link-block-2 w-inline-block">
-                        <img src="assets/images/logo-black.svg" loading="lazy" width="120" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
+                        <img src="assets/images/logo.png" loading="lazy" width="150" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
                     </a>
                 </div>
                 <nav role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
                     <div class="nav-menu-wrapper">
                         <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
-                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming</a></div>
-                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Day Services</a></div>
-                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                         <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a>
                     </div>
                     <div class="short-fur-pattern hide-desktop"></div>
@@ -276,8 +333,6 @@
 
     <div class="pricing-section">
         <div class="pricing-header">
-            <h1>Explore Grooming Packages</h1>
-            <p>Professional grooming services for your beloved pets</p>
         </div>
 
         <!-- DOG GROOMING -->
@@ -540,9 +595,9 @@
 
         <!-- CTA Section -->
         <div style="text-align: center; margin-top: 60px;">
-            <h2 style="color: #2c5f8d; margin-bottom: 20px;">Ready to Book?</h2>
+            <h2 style="color: #7d5c3b; margin-bottom: 20px;">Ready to Book?</h2>
             <p style="margin-bottom: 30px;">Give your pet the pampering they deserve!</p>
-            <a href="booking-form.html" class="button large w-button" style="display: inline-block; padding: 15px 40px; background: #2c5f8d; color: white; text-decoration: none; border-radius: 30px; font-weight: bold;">Book Appointment Now</a>
+            <a href="https://wa.me/6596109951" class="button large w-button" style="display: inline-block; padding: 15px 40px; background: #7d5c3b; color: #fff !important; text-decoration: none; border-radius: 30px; font-weight: bold;">Book Appointment Now</a>
         </div>
     </div>
 
@@ -550,16 +605,17 @@
         <div class="container-1440">
             <div class="footer-grid">
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
-                    <div class="adoptable-a-lottie"><img src="assets/images/logo-black.svg" alt="Huggs Pawly" width="87" /></div>
+                    <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container">
                     <a href="index.html" class="nav-link footer">Home</a>
-                    <a href="grooming-packages.html" class="nav-link footer">Grooming</a>
-                    <a href="day-services.html" class="nav-link footer">Day Services</a>
-                    <a href="about.html" class="nav-link footer">About</a>
+                    <a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a>
+                    <a href="day-services.html" class="nav-link footer">Daycare</a>
+                    <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
                     <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
                     <div class="flex-horizontal socials-padding">
                         <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">

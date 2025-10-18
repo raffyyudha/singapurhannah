@@ -15,6 +15,9 @@
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <style>
         @media (min-width:992px) {
@@ -248,7 +251,7 @@
             }
             
             .homepage-header {
-                min-height: 450px !important;
+                min-height: 500px !important;
             }
             
             .homepage-header p {
@@ -322,38 +325,149 @@
             color: #7d5c3b !important;
         }
         
+        .nav-menu-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        @media (max-width: 991px) {
+            .nav-menu-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
         .button,
         .w-button {
-            background-color: #7d5c3b !important;
-            border-color: #7d5c3b !important;
-            color: #FFFFFF !important;
+            background-color: #F5E6D3 !important;
+            border-color: #8B6F47 !important;
+            color: #000 !important;
         }
         
         .button:hover,
         .w-button:hover {
-            background-color: #6d4d32 !important;
-            color: #FFFFFF !important;
+            background-color: #E5D6C3 !important;
+            color: #000 !important;
         }
         
         .button.large,
         .w-button.large {
-            color: #FFFFFF !important;
+            color: #000 !important;
         }
         
-        /* Footer styling */
+        /* Hero section - text white except button */
+        .homepage-header h1,
+        .homepage-header p {
+            color: #fff !important;
+        }
+        
+        .homepage-header a[href*="wa.me"] {
+            color: #000 !important;
+            background: #F5E6D3 !important;
+        }
+        
+        /* Montserrat font for all text */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+        
+        /* Homepage text colors - all black except hero */
+        .cta-text,
+        .heading-4,
+        .heading-5,
+        .paragraph,
+        .large-text,
+        h2, h3, h6, p {
+            color: #000 !important;
+        }
+        
+        /* Book appointment section - LEFT BLACK, RIGHT DOG IMAGE */
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child {
+            background-color: #000 !important;
+            background-image: url('assets/images/blackwallpaper.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:nth-child(2) {
+            background-color: transparent !important;
+        }
+
+        /* Show dog image on RIGHT side */
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:nth-child(2) .pet-thumbnail-image-full {
+            background-image: url('assets/images/anjing.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            min-height: 360px !important;
+        }
+
+        /* White text on LEFT black background */
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child .heading-16-navy,
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child h3,
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child h6 {
+            color: #fff !important;
+        }
+
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child .badge-outline-2 {
+            background-color: transparent !important;
+            border: 2px solid #fff !important;
+            color: #fff !important;
+        }
+
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child .badge-outline-2 h6 {
+            color: #fff !important;
+        }
+
+        /* NEW SECTION - LEFT WHITE, RIGHT IMAGE */
+        .white-section-split .profile-card-half:first-child {
+            background-color: #fff !important;
+            background-image: none !important;
+        }
+
+        .white-section-split .profile-card-half:first-child .heading-16-navy,
+        .white-section-split .profile-card-half:first-child h3,
+        .white-section-split .profile-card-half:first-child h6 {
+            color: #000 !important;
+        }
+
+        .white-section-split .profile-card-half:first-child .badge-outline-2 {
+            background-color: #8B6F47 !important;
+            border: 2px solid #8B6F47 !important;
+            color: #fff !important;
+        }
+
+        .white-section-split .profile-card-half:first-child .badge-outline-2 h6 {
+            color: #fff !important;
+        }
+
+        .white-section-split .profile-card-half:nth-child(2) {
+            background-color: transparent !important;
+        }
+
+        .white-section-split .profile-card-half:nth-child(2) .pet-thumbnail-image-full {
+            background-image: url('assets/images/anjingg.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            min-height: 360px !important;
+        }
+        
+        /* Footer styling - BLACK background WHITE text */
         .footer {
-            background-color: #7d5c3b !important;
+            background-color: #000 !important;
         }
         
         .footer .nav-link,
         .footer a,
         .footer-links-container a {
-            color: #FFFFFF !important;
+            color: #fff !important;
         }
         
         .footer .nav-link:hover,
         .footer a:hover {
-            color: #d4a574 !important;
+            color: #ccc !important;
         }
         
         .footer-grid {
@@ -361,7 +475,7 @@
         }
         
         .footer .short-fur-pattern {
-            opacity: 0.3;
+            opacity: 0.1;
         }
         
         .social-links img,
@@ -528,10 +642,11 @@
                     role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
                     <div class="nav-menu-wrapper">
                         <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
-                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming</a></div>
-                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Day Services</a></div>
-                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms & Conditions</a></div>
                         <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a></div>
                     <div
                         class="short-fur-pattern hide-desktop"></div>
@@ -543,11 +658,11 @@
         </div>
     </header>
     <header data-w-id="bea9b7ed-f748-980a-924e-d39fafb4bf59" class="homepage-header" style="position: relative; width: 100%; min-height: 650px; background-image: url('assets/images/herobener.jpg'); background-size: cover; background-position: center center; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(125, 92, 59, 0.2) 0%, rgba(125, 92, 59, 0.5) 100%);"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3);"></div>
         <div style="position: relative; z-index: 2; text-align: center; max-width: 900px; padding: 80px 30px;">
-            <h1 style="font-size: 4em; font-weight: 600; margin-bottom: 25px; line-height: 1.3; font-family: 'DM Sans', sans-serif; color: #FFFFFF; text-shadow: 2px 4px 20px rgba(0,0,0,0.4); letter-spacing: -0.5px;">Home-Based Grooming<br><span style="font-weight: 300; font-style: italic; font-size: 0.85em;">with a Gentle Touch</span></h1>
-            <p style="font-size: 1.25em; margin-bottom: 45px; color: #FFFFFF; font-weight: 300; text-shadow: 1px 2px 10px rgba(0,0,0,0.3); max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.7;">Your furkid's next spa day is just a message away.</p>
-            <a href="https://wa.me/6596109951" style="display: inline-block; background: #7d5c3b; color: white; padding: 18px 45px; text-decoration: none; font-weight: 600; letter-spacing: 1.5px; font-size: 0.95em; transition: all 0.3s ease; border-radius: 50px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); text-transform: uppercase;">MESSAGE US TO BOOK</a>
+            <h1 style="font-size: 4em; font-weight: 600; margin-bottom: 25px; line-height: 1.3; font-family: 'DM Sans', sans-serif; color: #fff; text-shadow: 2px 4px 20px rgba(0,0,0,0.3); letter-spacing: -0.5px;">Home-Based Grooming<br><span style="font-weight: 300; font-style: italic; font-size: 0.85em;">with a Gentle Touch</span></h1>
+            <p style="font-size: 1.25em; margin-bottom: 45px; color: #fff; font-weight: 300; text-shadow: 1px 2px 10px rgba(0,0,0,0.2); max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.7;">Your furkid's next spa day is just a message away.</p>
+            <a href="https://wa.me/6596109951" style="display: inline-block; background: #F5E6D3; color: #000; padding: 18px 45px; text-decoration: none; font-weight: 600; letter-spacing: 1.5px; font-size: 0.95em; transition: all 0.3s ease; border-radius: 50px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); text-transform: uppercase;">MESSAGE US TO BOOK</a>
         </div>
     </header>
     <section class="section wide white">
@@ -604,11 +719,34 @@
                     </div>
                 </div>
                 <div class="profile-card-half">
-                    <div class="pet-thumbnail-image-full"></div>
+                    <div class="pet-thumbnail-image-full" style="background-image: url('assets/images/anjing.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                 </div>
             </div>
         </a>
     </div>
+    
+    <!-- NEW WHITE SECTION -->
+    <div class="_2-column-with-image">
+        <a href="booking-form.html" class="link-block-full w-inline-block">
+            <div class="flex-horizontal white-section-split">
+                <div class="profile-card-half">
+                    <div class="content-padding profile-card-full">
+                        <div class="short-fur-pattern"></div>
+                        <div class="profile-descriptor-dark">
+                            <h3 class="heading-16-navy">Already Booked via WhatsApp?<br>Fill Out the Form!</h3>
+                            <div class="badge-outline-2">
+                                <h6>Complete Details</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-card-half">
+                    <div class="pet-thumbnail-image-full" style="background-image: url('assets/images/anjingg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
     <section class="section negative-bottom-margin-padding">
         <div class="container-1100">
             <div class="content-padding centered-content">
@@ -689,9 +827,9 @@
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
                     <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
                 </div>
-                <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container"><a href="index.html" class="nav-link footer">Home</a><a href="grooming-packages.html" class="nav-link footer">Grooming</a><a href="day-services.html" class="nav-link footer">Day Services</a><a href="about.html" class="nav-link footer">About</a></div>
+                <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container"><a href="index.html" class="nav-link footer">Home</a><a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a><a href="day-services.html" class="nav-link footer">Daycare</a><a href="about.html" class="nav-link footer">About Us</a></div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838"
-                    class="footer-links-container"><a href="reviews.html" class="nav-link footer">Reviews</a><a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
+                    class="footer-links-container"><a href="reviews.html" class="nav-link footer">Reviews</a><a href="terms.html" class="nav-link footer">Terms & Conditions</a><a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
                     <div class="flex-horizontal socials-padding">
                         <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">
                             <img src="assets/images/63d538501c71e03415ed9908_Icons_Adoptable_White_Instagram.svg" alt="Instagram" />

@@ -7,7 +7,49 @@
     <meta content="Read what our customers say about Huggs Pawly Pet Grooming. Real reviews from Google Maps." name="description" />
     <meta content="Customer Reviews - Huggs Pawly" property="og:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Footer styling - BLACK background WHITE text */
+        .footer {
+            background-color: #000 !important;
+        }
+        
+        .footer .nav-link,
+        .footer a,
+        .footer-links-container a {
+            color: #fff !important;
+        }
+        
+        .footer .nav-link:hover,
+        .footer a:hover {
+            color: #ccc !important;
+        }
+        
+        .footer-grid {
+            background-color: transparent !important;
+        }
+        
+        .footer .short-fur-pattern {
+            opacity: 0.1;
+        }
+        
+        .social-links img,
+        .social-links svg {
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links-container:first-child {
+            justify-content: flex-start !important;
+        }
+        
+        /* Montserrat font for all text */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
     <style>
         .reviews-section {
             padding: 80px 20px;
@@ -22,7 +64,7 @@
         
         .reviews-header h1 {
             font-size: 3em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 20px;
             font-weight: bold;
         }
@@ -45,16 +87,16 @@
         .cta-box {
             text-align: center;
             padding: 50px 40px;
-            background: linear-gradient(135deg, #2c5f8d 0%, #1e4a6b 100%);
+            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
             border-radius: 20px;
-            color: white;
+            color: #000;
             margin: 40px 0;
         }
         
         .cta-box h2 {
             font-size: 2.2em;
             margin-bottom: 20px;
-            color: white;
+            color: #000;
         }
         
         .cta-box p {
@@ -66,8 +108,8 @@
         .cta-button {
             display: inline-block;
             padding: 18px 45px;
-            background: white;
-            color: #2c5f8d;
+            background: #F5E6D3;
+            color: #000;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
@@ -108,14 +150,15 @@
         
         .rating-card h3 {
             font-size: 1.5em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 10px;
+            margin-top: 0;
         }
         
         .rating-card .value {
             font-size: 2.5em;
             font-weight: bold;
-            color: #b8824f;
+            color: #8B6F47;
         }
         
         .stars {
@@ -178,16 +221,17 @@
             <div class="nav-grid-container">
                 <div id="w-node-da75a56e-7b3b-26b8-c721-a123e3e4a8ff-67d5300b">
                     <a href="index.html" class="link-block-2 w-inline-block">
-                        <img src="assets/images/logo-black.svg" loading="lazy" width="120" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
+                        <img src="assets/images/logo.png" loading="lazy" width="150" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
                     </a>
                 </div>
                 <nav role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
                     <div class="nav-menu-wrapper">
                         <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
-                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming</a></div>
-                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Day Services</a></div>
-                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                         <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a>
                     </div>
                     <div class="short-fur-pattern hide-desktop"></div>
@@ -207,7 +251,6 @@
 
         <div class="rating-summary">
             <div class="rating-card">
-                <div class="icon">⭐</div>
                 <h3>Google Rating</h3>
                 <div class="value">5.0</div>
                 <div class="stars">★★★★★</div>
@@ -215,14 +258,12 @@
             </div>
             
             <div class="rating-card">
-                <div class="icon">💬</div>
                 <h3>Total Reviews</h3>
                 <div class="value">9</div>
                 <p style="color: #666; margin-top: 10px;">And growing!</p>
             </div>
             
             <div class="rating-card">
-                <div class="icon">🐾</div>
                 <h3>Happy Customers</h3>
                 <div class="value">100%</div>
                 <p style="color: #666; margin-top: 10px;">Satisfaction Rate</p>
@@ -230,7 +271,7 @@
         </div>
 
         <div class="cta-box">
-            <h2>📍 See All Our Google Reviews</h2>
+            <h2>See All Our Google Reviews</h2>
             <p>Read authentic reviews from our customers on Google Maps</p>
             <a href="https://www.google.com/maps/place/Huggs+Pawly+Pet+Grooming/@1.4318806,103.829965,17z/data=!3m1!4b1!4m6!3m5!1s0x31da15886576fa3d:0x96e2a1e8b0e22df9!8m2!3d1.4318806!4d103.8325399!16s%2Fg%2F11sydgznx3?entry=ttu" target="_blank" class="cta-button">View on Google Maps</a>
         </div>
@@ -252,9 +293,9 @@
         </div>
 
         <div style="text-align: center; margin-top: 60px;">
-            <h2 style="color: #2c5f8d; margin-bottom: 20px;">Ready to Experience Our Service?</h2>
+            <h2 style="color: #7d5c3b; margin-bottom: 20px;">Ready to Experience Our Service?</h2>
             <p style="margin-bottom: 30px; font-size: 1.1em;">Book your appointment and see why our customers love us!</p>
-            <a href="booking-form.html" class="button large w-button" style="display: inline-block; padding: 15px 40px; background: #2c5f8d; color: white; text-decoration: none; border-radius: 30px; font-weight: bold;">Book Now</a>
+            <a href="https://wa.me/6596109951" class="button large w-button" style="display: inline-block; padding: 15px 40px; background: #7d5c3b; color: #fff !important; text-decoration: none; border-radius: 30px; font-weight: bold;">Book Now</a>
         </div>
     </div>
 
@@ -262,16 +303,17 @@
         <div class="container-1440">
             <div class="footer-grid">
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
-                    <div class="adoptable-a-lottie"><img src="assets/images/logo-black.svg" alt="Huggs Pawly" width="87" /></div>
+                    <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container">
                     <a href="index.html" class="nav-link footer">Home</a>
-                    <a href="grooming-packages.html" class="nav-link footer">Grooming</a>
-                    <a href="day-services.html" class="nav-link footer">Day Services</a>
-                    <a href="about.html" class="nav-link footer">About</a>
+                    <a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a>
+                    <a href="day-services.html" class="nav-link footer">Daycare</a>
+                    <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
                     <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
                     <div class="flex-horizontal socials-padding">
                         <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">

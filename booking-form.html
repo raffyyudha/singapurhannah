@@ -7,7 +7,49 @@
     <meta content="Book your pet boarding and daycare reservation at Huggs Pawly" name="description" />
     <meta content="Pet Boarding Reservation - Huggs Pawly" property="og:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Footer styling - BLACK background WHITE text */
+        .footer {
+            background-color: #000 !important;
+        }
+        
+        .footer .nav-link,
+        .footer a,
+        .footer-links-container a {
+            color: #fff !important;
+        }
+        
+        .footer .nav-link:hover,
+        .footer a:hover {
+            color: #ccc !important;
+        }
+        
+        .footer-grid {
+            background-color: transparent !important;
+        }
+        
+        .footer .short-fur-pattern {
+            opacity: 0.1;
+        }
+        
+        .social-links img,
+        .social-links svg {
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links-container:first-child {
+            justify-content: flex-start !important;
+        }
+        
+        /* Montserrat font for all text */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td, input, textarea, label, button {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
     <style>
         .booking-section {
             padding: 80px 20px;
@@ -30,7 +72,7 @@
         
         .booking-header h1 {
             font-size: 2.5em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 10px;
         }
         
@@ -45,11 +87,11 @@
             padding: 25px;
             background: #f9f9f9;
             border-radius: 15px;
-            border-left: 5px solid #b8824f;
+            border-left: 5px solid #8B6F47;
         }
         
         .info-section h3 {
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 15px;
             font-size: 1.4em;
         }
@@ -119,7 +161,7 @@
         }
         
         .form-section h2 {
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 25px;
             font-size: 1.8em;
         }
@@ -151,7 +193,7 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #2c5f8d;
+            border-color: #8B6F47;
         }
         
         .form-group textarea {
@@ -164,8 +206,8 @@
         }
         
         .submit-btn {
-            background: linear-gradient(135deg, #2c5f8d 0%, #1e4a6b 100%);
-            color: white;
+            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
+            color: #000;
             padding: 15px 50px;
             border: none;
             border-radius: 50px;
@@ -179,20 +221,20 @@
         
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(44, 95, 141, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
         .contact-cta {
             text-align: center;
             margin: 30px 0;
             padding: 30px;
-            background: linear-gradient(135deg, #b8824f 0%, #a67643 100%);
+            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
             border-radius: 15px;
-            color: white;
+            color: #000;
         }
         
         .contact-cta h3 {
-            color: white;
+            color: #000;
             margin-bottom: 15px;
         }
         
@@ -239,16 +281,17 @@
             <div class="nav-grid-container">
                 <div id="w-node-da75a56e-7b3b-26b8-c721-a123e3e4a8ff-67d5300b">
                     <a href="index.html" class="link-block-2 w-inline-block">
-                        <img src="assets/images/logo-black.svg" loading="lazy" width="120" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
+                        <img src="assets/images/logo.png" loading="lazy" width="150" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
                     </a>
                 </div>
                 <nav role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
                     <div class="nav-menu-wrapper">
                         <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
-                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming</a></div>
-                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Day Services</a></div>
-                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                         <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a>
                     </div>
                     <div class="short-fur-pattern hide-desktop"></div>
@@ -260,170 +303,25 @@
         </div>
     </header>
 
-    <div class="booking-section">
-        <div class="booking-container">
-            <div class="booking-header">
-                <h1>🐾 Huggs Pawly Pet Boarding Reservation Form</h1>
-                <p class="subtitle">Home-Based Pet Sitting & Daycare Services</p>
-            </div>
-
-            <div class="info-section">
-                <p>I'm a <strong>B-class SKC pet groomer</strong>. I don't have a pet boarding license, but I have a certificate in pet care and management from <strong>Temasek Polytechnic</strong>. Initially, I started by helping my regular grooming customers look after their pets when they were away, charging a fee for my services.</p>
-                
-                <p><strong>If you're seeking a licensed pet boarding facility, I'm not the right fit.</strong> However, if you're looking for a caring home-based pet sitter who will treat your furkid like family, then you've come to the right place.</p>
-                
-                <p>I have a genuine passion for animals, and my husband and I share this love. Together, we'll ensure your furkid receives the attention and care they deserve. While I have a day job, my husband works from home on Thursday to Monday.</p>
-            </div>
-
-            <div class="info-section">
-                <h3>👥 Who's Home & When?</h3>
-                <p style="margin-bottom: 20px;"><em>I work a day job.</em></p>
-                
-                <div class="schedule-box">
-                    <h4>📅 Thursday to Monday (WFH - Full day monitoring)</h4>
-                    <p><strong>Me and my husband both take care of your furkid together.</strong></p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>🐾 Full-day monitoring & care</li>
-                        <li>🐾 2 Walks daily (Morning & Evening)</li>
-                        <li>🐾 At least 30 mins of Play Time</li>
-                    </ul>
-                </div>
-                
-                <div class="schedule-box">
-                    <h4>📅 Tuesday & Wednesday (Office)</h4>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>🐾 6am: Morning Walk + Breakfast</li>
-                        <li>🐾 Daytime: Free roam in the living room with CCTV</li>
-                        <li>🐾 7pm: Evening Walk + Dinner</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="includes-box">
-                <h3>🛏️ Boarding & Daycare Includes:</h3>
-                <ul>
-                    <li>✔ 2 Walks Every Day</li>
-                    <li>✔ At Least 30 Minutes of Play Time</li>
-                    <li>✔ Weekly Basic Shower (for stays of 4 nights or more)</li>
-                    <li>✔ Kibble Provided (but it's best to bring your own to prevent your dog from refusing to eat)</li>
-                    <li>✔ Food Reheating Available</li>
-                </ul>
-            </div>
-
-            <div class="info-section">
-                <h3>🕐 Check-In/Check-Out Times: 1 Day</h3>
-                <ul>
-                    <li><strong>Check-In:</strong> 2pm - 4:30pm</li>
-                    <li><strong>Check-Out:</strong> 10am - 12:45pm</li>
-                    <li><strong>(a)</strong> Christmas Eve, New Year's Eve, and Chinese New Year's Eve: Check-out only: 10am - 12pm.</li>
-                    <li><strong>(b)</strong> All Public Holidays: <strong style="color: red;">Closed ❌</strong></li>
-                </ul>
-            </div>
-
-            <div class="info-section">
-                <h3>📋 What We Need:</h3>
-                <ul>
-                    <li>✅ Valid core vaccination (within 12 months)</li>
-                    <li>✅ Dewormed (within 12 months)</li>
-                    <li>⚠️ We reserve the right to decline bookings if needed</li>
-                </ul>
-            </div>
-
-            <div class="alert-box">
-                <h3>🚨 Important Notes – Vet Visits & Medical Care</h3>
-                <p>If your pet shows signs of illness or injury during their stay, we will bring them to <strong>Mount Pleasant Vet Yishun</strong>:</p>
-                <p><strong>📍 236 Yishun Ring Rd, #01-1010, Singapore 760236</strong><br/>
-                <strong>📞 6451 5242</strong></p>
-                <p><strong>All vet bills will be borne by the pet owner</strong>, unless clearly caused by our negligence or unsafe environment. We will do our best to contact you before visiting the vet, unless it's an emergency.</p>
-            </div>
-
-            <div class="form-section">
-                <h2>📝 Reservation Form</h2>
-                
-                <form id="bookingForm" action="https://wa.me/6596109951" method="get">
-                    <h3 style="color: #2c5f8d; margin-bottom: 20px;">👤 Fur Parent's Details</h3>
-                    
-                    <div class="form-group">
-                        <label>Your Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Mobile Number <span class="required">*</span></label>
-                        <input type="tel" id="mobile" name="mobile" required placeholder="e.g., 9610 9951">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Second Contact Name & Mobile Number <span class="required">*</span></label>
-                        <input type="text" id="second_contact" name="second_contact" required placeholder="e.g., Jane Doe - 8123 4567">
-                    </div>
-                    
-                    <h3 style="color: #2c5f8d; margin: 30px 0 20px;">🐕 Pet Details</h3>
-                    
-                    <div class="form-group">
-                        <label>Pet Name <span class="required">*</span></label>
-                        <input type="text" id="pet_name" name="pet_name" required placeholder="Your pet's name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Pet Type <span class="required">*</span></label>
-                        <select id="pet_type" name="pet_type" required>
-                            <option value="">Select pet type</option>
-                            <option value="Dog">Dog</option>
-                            <option value="Cat">Cat</option>
-                            <option value="Rabbit">Rabbit</option>
-                            <option value="Guinea Pig">Guinea Pig</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Breed</label>
-                        <input type="text" id="breed" name="breed" placeholder="e.g., Golden Retriever">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Age</label>
-                        <input type="text" id="age" name="age" placeholder="e.g., 2 years old">
-                    </div>
-                    
-                    <h3 style="color: #2c5f8d; margin: 30px 0 20px;">📅 Booking Details</h3>
-                    
-                    <div class="form-group">
-                        <label>Check-In Date <span class="required">*</span></label>
-                        <input type="date" id="checkin" name="checkin" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Check-Out Date <span class="required">*</span></label>
-                        <input type="date" id="checkout" name="checkout" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Special Requirements / Notes</label>
-                        <textarea id="notes" name="notes" placeholder="Any special dietary needs, medical conditions, behavioral notes, etc."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Booking via WhatsApp</button>
-                </form>
-            </div>
-        </div>
+    <div style="width: 100%; min-height: calc(100vh - 100px); display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; background: #f5f5f5;">
+        <iframe src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__fXXLBhUMEpGNVhFMTQ1OElYTkRFOE83M1ZJVzJMNy4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 1200px; min-height: 800px; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
     </div>
 
     <footer data-w-id="e390ad44-2592-9581-74e8-99c94401d838" class="footer">
         <div class="container-1440">
             <div class="footer-grid">
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
-                    <div class="adoptable-a-lottie"><img src="assets/images/logo-black.svg" alt="Huggs Pawly" width="87" /></div>
+                    <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container">
                     <a href="index.html" class="nav-link footer">Home</a>
-                    <a href="grooming-packages.html" class="nav-link footer">Grooming</a>
-                    <a href="day-services.html" class="nav-link footer">Day Services</a>
-                    <a href="about.html" class="nav-link footer">About</a>
+                    <a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a>
+                    <a href="day-services.html" class="nav-link footer">Daycare</a>
+                    <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
                     <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
                     <div class="flex-horizontal socials-padding">
                         <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">

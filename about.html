@@ -7,7 +7,49 @@
     <meta content="Learn about Huggs Pawly Pet Grooming - Your trusted pet care partner in Singapore" name="description" />
     <meta content="About Us - Huggs Pawly" property="og:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Footer styling - BLACK background WHITE text */
+        .footer {
+            background-color: #000 !important;
+        }
+        
+        .footer .nav-link,
+        .footer a,
+        .footer-links-container a {
+            color: #fff !important;
+        }
+        
+        .footer .nav-link:hover,
+        .footer a:hover {
+            color: #ccc !important;
+        }
+        
+        .footer-grid {
+            background-color: transparent !important;
+        }
+        
+        .footer .short-fur-pattern {
+            opacity: 0.1;
+        }
+        
+        .social-links img,
+        .social-links svg {
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links-container:first-child {
+            justify-content: flex-start !important;
+        }
+        
+        /* Montserrat font for all text */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
     <style>
         .about-section {
             padding: 80px 20px;
@@ -22,7 +64,7 @@
         
         .about-header h1 {
             font-size: 3em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 20px;
             font-weight: bold;
         }
@@ -43,7 +85,7 @@
         
         .about-text h2 {
             font-size: 2.2em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 20px;
         }
         
@@ -97,7 +139,7 @@
         
         .value-card h3 {
             font-size: 1.5em;
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 15px;
         }
         
@@ -109,16 +151,16 @@
         .cta-section {
             text-align: center;
             padding: 60px 40px;
-            background: linear-gradient(135deg, #2c5f8d 0%, #1e4a6b 100%);
+            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
             border-radius: 20px;
-            color: white;
+            color: #000;
             margin: 60px 0;
         }
         
         .cta-section h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: white;
+            color: #000;
         }
         
         .cta-section p {
@@ -130,8 +172,8 @@
         .cta-button {
             display: inline-block;
             padding: 18px 45px;
-            background: white;
-            color: #2c5f8d;
+            background: #F5E6D3;
+            color: #000;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
@@ -147,26 +189,28 @@
         
         .stats-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px 0;
             text-align: center;
+            max-width: 100%;
         }
         
         .stat-item {
-            padding: 30px;
+            padding: 20px 10px;
         }
         
         .stat-item .number {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
             color: #b8824f;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .stat-item .label {
-            font-size: 1.2em;
+            font-size: 0.95em;
             color: #555;
+            line-height: 1.3;
         }
         
         .info-box {
@@ -174,11 +218,11 @@
             padding: 40px;
             border-radius: 15px;
             margin: 40px 0;
-            border-left: 5px solid #b8824f;
+            border-left: 5px solid #8B6F47;
         }
         
         .info-box h3 {
-            color: #2c5f8d;
+            color: #8B6F47;
             margin-bottom: 15px;
             font-size: 1.8em;
         }
@@ -238,16 +282,17 @@
             <div class="nav-grid-container">
                 <div id="w-node-da75a56e-7b3b-26b8-c721-a123e3e4a8ff-67d5300b">
                     <a href="index.html" class="link-block-2 w-inline-block">
-                        <img src="assets/images/logo-black.svg" loading="lazy" width="120" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
+                        <img src="assets/images/logo.png" loading="lazy" width="150" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
                     </a>
                 </div>
                 <nav role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
                     <div class="nav-menu-wrapper">
                         <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
-                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming</a></div>
-                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Day Services</a></div>
-                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                         <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a>
                     </div>
                     <div class="short-fur-pattern hide-desktop"></div>
@@ -266,14 +311,14 @@
         </div>
 
         <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images/ourstory.jpg" alt="Pet Grooming" />
+            </div>
             <div class="about-text">
                 <h2>Our Story</h2>
-                <p>Welcome to <strong>Huggs Pawly Pet Grooming</strong>, your trusted partner for professional pet care in Singapore. Located at Blk 148 Yishun Street 11, we've been providing top-quality grooming services with personalized attention to every furry friend that walks through our doors.</p>
-                <p>We believe that every pet deserves to look and feel their best. Our passion for animals drives us to deliver exceptional grooming services in a safe, comfortable, and stress-free environment.</p>
-                <p>From puppies experiencing their first grooming to senior pets needing extra gentle care, we treat every pet like our own family member.</p>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Pet Grooming" />
+                <p>Hi, I'm Hannah - the groomer behind Huggs Pawly! I have a full-time job, but in my free time, I turn my little corner at home into a cozy space for grooming. It started as a hobby because I simply love being around animals and it's something I truly look forward to every day.</p>
+                <p>Nothing makes me happier than seeing furkids clean, comfy, and wagging their tails after a session. Every groom is done with lots of patience, love, and care, just like how I would treat my own.</p>
+                <p>Thank you to all my lovely customers who've supported me over the years and helped me keep this happy little dream going! 💕</p>
             </div>
         </div>
 
@@ -297,46 +342,52 @@
         </div>
 
         <div class="values-section">
-            <h2 style="text-align: center; color: #2c5f8d; font-size: 2.5em; margin-bottom: 20px;">Why Choose Huggs Pawly?</h2>
-            <p style="text-align: center; color: #666; font-size: 1.2em; margin-bottom: 40px;">We're committed to providing the best care for your beloved pets</p>
+            <h2 style="text-align: center; color: #7d5c3b; font-size: 2.5em; margin-bottom: 40px;">Why Choose Us</h2>
             
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="icon">💝</div>
-                    <h3>Personalized Care</h3>
-                    <p>Every pet is unique. We tailor our services to meet your pet's specific needs and temperament.</p>
+                    <h3>Personal Care</h3>
+                    <p>Every pet is different. We take time to know them and make sure they feel safe and calm.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="icon">🛡️</div>
-                    <h3>Safe & Clean</h3>
-                    <p>We maintain the highest standards of hygiene and safety to ensure your pet's well-being.</p>
+                    <h3>Clean and Cozy</h3>
+                    <p>Our place is kept clean and tidy so pets can relax comfortably.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="icon">⭐</div>
-                    <h3>Professional Service</h3>
-                    <p>Our experienced groomers are trained to handle pets with care, patience, and expertise.</p>
+                    <h3>Gentle and Patient</h3>
+                    <p>We groom each pet slowly and gently, giving them time to feel relaxed.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="icon">❤️</div>
-                    <h3>Compassion & Integrity</h3>
-                    <p>We treat every pet like family, with genuine love and respect.</p>
+                    <h3>With Love and Respect</h3>
+                    <p>We treat every pet like our own, with care and kindness.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="icon">🌟</div>
-                    <h3>Premium Products</h3>
-                    <p>We use only high-quality, pet-safe products for grooming and care.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="icon">📞</div>
-                    <h3>Easy Booking</h3>
-                    <p>Book conveniently via WhatsApp and get quick responses to your queries.</p>
+                    <h3>Good Products</h3>
+                    <p>We use mild and safe products that suit different skin and coat types.</p>
                 </div>
             </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 60px;">
+            <h3>📅 Booking</h3>
+            <p>Please message us on WhatsApp to book your grooming slot. As we both have day jobs, it's best to book at least one week in advance. We will schedule your pet based on our available time slots below.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🕐 Operating Hours</h3>
+            <ul style="list-style: none; padding-left: 0; line-height: 2;">
+                <li><strong>Monday:</strong> Closed</li>
+                <li><strong>Tuesday:</strong> 7 PM – 10 PM</li>
+                <li><strong>Wednesday:</strong> Closed</li>
+                <li><strong>Thursday:</strong> 7 PM – 10 PM</li>
+                <li><strong>Friday:</strong> 7 PM – 10 PM</li>
+                <li><strong>Saturday:</strong> 8 AM – 6 PM</li>
+                <li><strong>Sunday:</strong> 3 PM – 6 PM</li>
+            </ul>
         </div>
 
         <div class="info-box">
@@ -353,7 +404,7 @@
 
         <div class="about-content" style="margin-top: 60px;">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop" alt="Happy Dog" />
+                <img src="assets/images/ourstory2.jpg" alt="Happy Dog" />
             </div>
             <div class="about-text">
                 <h2>Our Commitment</h2>
@@ -375,7 +426,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 60px;">
-            <h2 style="color: #2c5f8d; margin-bottom: 20px;">📍 Visit Us</h2>
+            <h2 style="color: #7d5c3b; margin-bottom: 20px;">📍 Visit Us</h2>
             <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;"><strong>Huggs Pawly Pet Grooming</strong></p>
             <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">Blk 148 Yishun Street 11, Singapore 760148</p>
             <a href="https://www.google.com/maps/place/Huggs+Pawly+Pet+Grooming/@1.4318806,103.829965,17z/data=!3m1!4b1!4m6!3m5!1s0x31da15886576fa3d:0x96e2a1e8b0e22df9!8m2!3d1.4318806!4d103.8325399!16s%2Fg%2F11sydgznx3?entry=ttu" target="_blank" class="button large w-button">Get Directions</a>
@@ -386,16 +437,17 @@
         <div class="container-1440">
             <div class="footer-grid">
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
-                    <div class="adoptable-a-lottie"><img src="assets/images/logo-black.svg" alt="Huggs Pawly" width="87" /></div>
+                    <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container">
                     <a href="index.html" class="nav-link footer">Home</a>
-                    <a href="grooming-packages.html" class="nav-link footer">Grooming</a>
-                    <a href="day-services.html" class="nav-link footer">Day Services</a>
-                    <a href="about.html" class="nav-link footer">About</a>
+                    <a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a>
+                    <a href="day-services.html" class="nav-link footer">Daycare</a>
+                    <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
                     <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <a href="https://wa.me/6596109951" class="nav-link footer">Book Now</a>
                     <div class="flex-horizontal socials-padding">
                         <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">
