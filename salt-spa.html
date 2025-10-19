@@ -13,6 +13,14 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/mobile-menu-fix.css" rel="stylesheet" type="text/css" />
     <style>
+      /* Make spa headers smaller on small phones */
+      @media (max-width: 480px) {
+        .spa-header h1 { font-size: 1.5em !important; line-height: 1.2 !important; }
+        .thalasso-title { font-size: 1.25em !important; }
+        .scent-card h3 { font-size: 1rem !important; }
+      }
+    </style>
+    <style>
         /* Footer styling - BLACK background WHITE text */
         .footer {
             background-color: #000 !important;
@@ -311,69 +319,15 @@
 
     <div class="spa-section">
         <div class="spa-header">
-            <h1>SPA FOR YOUR LOVELY PUP 🌿</h1>
-            <p class="subtitle">Give your furry friend a relaxing and refreshing spa experience<br/>with our aromatic bath salts.</p>
+            <h1>SPA FOR YOUR LOVELY PUP</h1>
         </div>
 
-        <div class="spa-hero">
-            <h2>Scents and Benefits</h2>
-        </div>
-
-        <div class="scents-grid">
-            <!-- Lavender -->
-            <div class="scent-card">
-                <div class="scent-number">1</div>
-                <h3>🌸 LAVENDER</h3>
-                <div class="benefit">Soothe separation anxiety</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Perfect for anxious pups who need calming and relaxation.</p>
-            </div>
-
-            <!-- Chamomile -->
-            <div class="scent-card">
-                <div class="scent-number">2</div>
-                <h3>🌼 CHAMOMILE</h3>
-                <div class="benefit">Ease joint discomfort</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Ideal for senior dogs or those with joint pain.</p>
-            </div>
-
-            <!-- Musk Mallow -->
-            <div class="scent-card">
-                <div class="scent-number">3</div>
-                <h3>🌺 MUSK MALLOW</h3>
-                <div class="benefit">Ignite pup's adventurous spirit</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Boosts energy and playfulness for active dogs.</p>
-            </div>
-
-            <!-- Coconut & Vanilla -->
-            <div class="scent-card">
-                <div class="scent-number">4</div>
-                <h3>🥥 COCONUT & VANILLA</h3>
-                <div class="benefit">Pampers and rejuvenates skin</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Keeps the skin soft, healthy, and moisturized.</p>
-            </div>
-
-            <!-- Rose -->
-            <div class="scent-card">
-                <div class="scent-number">5</div>
-                <h3>🌹 ROSE</h3>
-                <div class="benefit">Comfort older pups</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Gentle and soothing for senior dogs.</p>
-            </div>
-
-            <!-- Peppermint & Rosemary -->
-            <div class="scent-card">
-                <div class="scent-number">6</div>
-                <h3>🌿 PEPPERMINT & ROSEMARY</h3>
-                <div class="benefit">Tailored for lawn-loving pups</div>
-                <p style="margin-top: 20px; color: #888; font-style: italic;">Great for active, outdoor-loving dogs.</p>
-            </div>
-        </div>
-
-        <div style="margin-top: 60px; padding: 40px; background: #f9f6f2; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-            <h3 style="color: #8B6F47; margin-bottom: 20px; font-size: 2em; font-weight: bold;">🌊 Thalasso Therapy Mud Spa</h3>
-            <p style="font-size: 1.2em; color: #666; margin-bottom: 20px; line-height: 1.8;">A 20-minute spa treatment using natural sea mud, seaweed extracts, and spa shampoo. It helps clean, moisturize, and make your pet's skin and coat soft and shiny - great for dry or sensitive skin.</p>
-            <h4 style="color: #8B6F47; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; font-weight: bold;">Benefits:</h4>
-            <ul style="line-height: 2.2; color: #666; font-size: 1.1em; list-style: none; padding-left: 0;">
+        <!-- Thalasso section moved to top and cleaned -->
+        <div style="margin-top: 20px; padding: 40px; background: #f9f6f2; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <h3 class="thalasso-title" style="color: #8B6F47; margin-bottom: 16px; font-size: 1.6em; font-weight: bold;">Thalasso Therapy Mud Spa</h3>
+            <p style="font-size: 1.1em; color: #666; margin-bottom: 18px; line-height: 1.7;">A 20-minute spa treatment using natural sea mud, seaweed extracts, and spa shampoo. It helps clean, moisturize, and make your pet's skin and coat soft and shiny - great for dry or sensitive skin.</p>
+            <h4 style="color: #8B6F47; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; font-weight: bold;">Benefits:</h4>
+            <ul style="line-height: 2; color: #666; font-size: 1em; list-style: none; padding-left: 0;">
                 <li>✓ Deep cleans and removes dirt</li>
                 <li>✓ Keeps skin hydrated and healthy</li>
                 <li>✓ Reduces itch and dryness</li>
@@ -382,16 +336,74 @@
             </ul>
         </div>
 
+        <!-- Salt Spa title placed after Thalasso -->
+        <h2 style="margin-top: 30px; text-align: center; color: #8B6F47; font-size: 1.8em;">Salt Spa</h2>
+
         <div style="margin-top: 60px; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-            <h3 style="color: #b8824f; margin-bottom: 20px; font-size: 1.8em;">💡 Why Choose Salt Spa?</h3>
+            <h3 style="color: #b8824f; margin-bottom: 20px; font-size: 1.6em;">Why Choose Salt Spa?</h3>
             <ul style="line-height: 2.5; color: #666; font-size: 1.1em;">
-                <li>✨ <strong>Natural Ingredients:</strong> All our bath salts are made from natural, pet-safe ingredients</li>
-                <li>💆 <strong>Therapeutic Benefits:</strong> Each scent is carefully selected for specific health benefits</li>
-                <li>🧘 <strong>Stress Relief:</strong> Helps reduce anxiety and promotes relaxation</li>
-                <li>🌟 <strong>Skin Health:</strong> Nourishes and moisturizes your pup's skin and coat</li>
-                <li>👃 <strong>Pleasant Aroma:</strong> Leaves your pet smelling fresh and clean</li>
-                <li>⏱️ <strong>Quick Treatment:</strong> Spa session takes only 20-30 minutes</li>
+                <li><strong>Natural Ingredients:</strong> All our bath salts are made from natural, pet-safe ingredients</li>
+                <li><strong>Therapeutic Benefits:</strong> Each scent is carefully selected for specific health benefits</li>
+                <li><strong>Stress Relief:</strong> Helps reduce anxiety and promotes relaxation</li>
+                <li><strong>Skin Health:</strong> Nourishes and moisturizes your pup's skin and coat</li>
+                <li><strong>Pleasant Aroma:</strong> Leaves your pet smelling fresh and clean</li>
+                <li><strong>Quick Treatment:</strong> Spa session takes only 20-30 minutes</li>
             </ul>
+        </div>
+
+        <!-- Scents moved to the end -->
+        <div class="spa-hero" style="margin-top: 30px;">
+            <h2>Scents and Benefits</h2>
+        </div>
+
+        <div class="scents-grid">
+            <!-- Lavender -->
+            <div class="scent-card">
+                <div class="scent-number">1</div>
+                <h3>LAVENDER</h3>
+                <div class="benefit">Soothe separation anxiety</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Perfect for anxious pups who need calming and relaxation.</p>
+            </div>
+
+            <!-- Chamomile -->
+            <div class="scent-card">
+                <div class="scent-number">2</div>
+                <h3>CHAMOMILE</h3>
+                <div class="benefit">Ease joint discomfort</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Ideal for senior dogs or those with joint pain.</p>
+            </div>
+
+            <!-- Musk Mallow -->
+            <div class="scent-card">
+                <div class="scent-number">3</div>
+                <h3>MUSK MALLOW</h3>
+                <div class="benefit">Ignite pup's adventurous spirit</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Boosts energy and playfulness for active dogs.</p>
+            </div>
+
+            <!-- Coconut & Vanilla -->
+            <div class="scent-card">
+                <div class="scent-number">4</div>
+                <h3>COCONUT & VANILLA</h3>
+                <div class="benefit">Pampers and rejuvenates skin</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Keeps the skin soft, healthy, and moisturized.</p>
+            </div>
+
+            <!-- Rose -->
+            <div class="scent-card">
+                <div class="scent-number">5</div>
+                <h3>ROSE</h3>
+                <div class="benefit">Comfort older pups</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Gentle and soothing for senior dogs.</p>
+            </div>
+
+            <!-- Peppermint & Rosemary -->
+            <div class="scent-card">
+                <div class="scent-number">6</div>
+                <h3>PEPPERMINT & ROSEMARY</h3>
+                <div class="benefit">Tailored for lawn-loving pups</div>
+                <p style="margin-top: 20px; color: #888; font-style: italic;">Great for active, outdoor-loving dogs.</p>
+            </div>
         </div>
     </div>
 

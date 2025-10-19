@@ -170,6 +170,13 @@
   .pricing-category .pricing-table th,
   .pricing-category .pricing-table td { font-size: .85rem !important; }
   .service-description p { font-size: .9rem !important; }
+
+  /* Grooming Rates: Spa benefits cards (Lavender, Chamomile, etc.) */
+  .spa-benefits { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .spa-benefit { padding: 12px !important; }
+  .spa-benefit { font-size: .95rem !important; line-height: 1.35 !important; }
+  .spa-benefit strong { font-size: 1.05rem !important; }
+
   .daycare-info-text h2 {
     font-size: 1.6rem !important; /* was too large on mobile */
     line-height: 1.2 !important;
