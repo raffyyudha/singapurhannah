@@ -476,6 +476,18 @@
             min-height: 360px !important;
         }
 
+        /* Ensure LEFT text half matches image height and columns split evenly on desktop */
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child {
+            min-height: 360px !important;
+            flex: 1 1 50% !important;
+        }
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:nth-child(2) {
+            flex: 1 1 50% !important;
+        }
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half .content-padding.profile-card-full {
+            height: 100% !important;
+        }
+
         /* White text on LEFT black background */
         #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child .heading-16-navy,
         #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:first-child h3,
@@ -544,6 +556,11 @@
             background-repeat: no-repeat !important;
             min-height: 360px !important;
         }
+
+        /* Ensure LEFT text half matches image height and columns split evenly in the white split section */
+        .white-section-split .profile-card-half:first-child { min-height: 360px !important; flex: 1 1 50% !important; }
+        .white-section-split .profile-card-half:nth-child(2) { flex: 1 1 50% !important; }
+        .white-section-split .profile-card-half .content-padding.profile-card-full { height: 100% !important; }
         
         /* Footer styling - BLACK background WHITE text */
         .footer {

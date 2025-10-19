@@ -3,6 +3,34 @@
   /* Show and style burger on all pages */
   header .menu-button.w-nav-button { display: block !important; position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; }
 
+/* Global: unify main page titles to match Terms & Conditions */
+.about-header h1,
+.reviews-section h1,
+.shopping-section h1,
+.terms-header h1,
+.pricing-header h1,
+.spa-header h1,
+.daycare-header h1 {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #8B6F47 !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .about-header h1,
+  .reviews-section h1,
+  .shopping-section h1,
+  .terms-header h1,
+  .pricing-header h1,
+  .spa-header h1,
+  .daycare-header h1 {
+    font-size: 1.6em !important;
+    line-height: 1.2 !important;
+  }
+}
+
   /* Opened mobile menu overlay (supports Webflow attribute and class) */
   header .w-nav .w-nav-menu.is-open,
   header .w-nav .w-nav-menu[data-nav-menu-open] {
