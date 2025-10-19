@@ -473,7 +473,9 @@
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            min-height: 360px !important;
+            height: 100% !important;
+            min-height: 0 !important;
+            overflow: hidden !important;
         }
 
         /* Ensure LEFT text half matches image height and columns split evenly on desktop */
@@ -484,8 +486,18 @@
         #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half:nth-child(2) {
             flex: 1 1 50% !important;
         }
-        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half .content-padding.profile-card-full {
-            height: 100% !important;
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half { display: flex !important; align-items: stretch !important; }
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half .content-padding.profile-card-full { height: auto !important; flex: 1 1 auto !important; }
+        /* Stretch the row so both columns take tallest height */
+        #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 { align-items: stretch !important; }
+
+        /* Override any fixed heights from base CSS for consistent pairing */
+        @media (min-width: 992px) {
+            #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half { height: auto !important; }
+        }
+        @media (max-width: 991px) {
+            /* Override base CSS fixed heights on mobile/tablet for these sections */
+            #w-node-_67c1eb92-c4d0-5799-1f72-1390a335c974-4ced9819 .profile-card-half { height: auto !important; }
         }
 
         /* White text on LEFT black background */
@@ -554,13 +566,24 @@
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            min-height: 360px !important;
+            height: 100% !important;
+            min-height: 0 !important;
+            overflow: hidden !important;
         }
 
         /* Ensure LEFT text half matches image height and columns split evenly in the white split section */
         .white-section-split .profile-card-half:first-child { min-height: 360px !important; flex: 1 1 50% !important; }
         .white-section-split .profile-card-half:nth-child(2) { flex: 1 1 50% !important; }
-        .white-section-split .profile-card-half .content-padding.profile-card-full { height: 100% !important; }
+        .white-section-split .profile-card-half { display: flex !important; align-items: stretch !important; }
+        .white-section-split .profile-card-half .content-padding.profile-card-full { height: auto !important; flex: 1 1 auto !important; }
+        /* Stretch the row so both columns take tallest height */
+        .white-section-split { align-items: stretch !important; }
+        @media (min-width: 992px) { .white-section-split .profile-card-half { height: auto !important; } }
+        @media (max-width: 991px) { .white-section-split .profile-card-half { height: auto !important; } }
+        
+        
+        
+        
         
         /* Footer styling - BLACK background WHITE text */
         .footer {
@@ -977,7 +1000,7 @@
             </div>
             <div class="about-text">
                 <h2 style="color: #7d5c3b;">Our Commitment</h2>
-                <p style="color: #555;">At Huggs Pawly, we understand that your pet is not just an animal—they're family. That's why we're committed to:</p>
+                <p style="color: #555;">At Huggs Pawly, we understand that your pet is not just an animal, they're family. That's why we're committed to:</p>
                 <ul style="color: #555; list-style: none; padding-left: 0;">
                     <li>✓ Providing a stress-free grooming experience</li>
                     <li>✓ Using gentle handling techniques</li>
