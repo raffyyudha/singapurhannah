@@ -112,6 +112,12 @@ svg:not(:root) {
     overflow: hidden;
 }
 
+/* Override for big button icons - allow SVG to show fully */
+.big-lottie-icon svg:not(:root),
+.big-lottie-icons-wrapper svg:not(:root) {
+    overflow: visible !important;
+}
+
 hr {
     box-sizing: content-box;
     height: 0;
@@ -6371,6 +6377,16 @@ figcaption {
     margin-left: 0;
 }
 
+/* MOBILE HAMBURGER MENU FIX - GLOBAL */
+@media (max-width: 991px) {
+  .menu-button.w-nav-button {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 10001 !important;
+  }
+}
+
 .heading-16-navy-2 {
     color: var(--navy);
     text-align: center;
@@ -6484,6 +6500,9 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+    body, p, a, span, div, li {
+        font-size: 1.1em;
+    }
     h1 {
         font-size: 3rem;
         line-height: 3.2rem;
@@ -6855,7 +6874,7 @@ figcaption {
         width: 100%;
     }
     .big-lottie-icons-wrapper {
-        width: 5.5em;
+        width: 4.2em;
     }
     .slider-container {
         max-width: 100vw;
@@ -6927,7 +6946,7 @@ figcaption {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     ._4-column-grid.big-buttons {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
     ._4-column-grid.tablet-2-columns {
         grid-column-gap: 2em;
@@ -7330,7 +7349,7 @@ figcaption {
         height: 16em;
     }
     .big-lottie-icons-wrapper {
-        width: 5em;
+        width: 4.6em;
     }
     .inside-margin {
         margin-right: 0;
@@ -7378,6 +7397,9 @@ figcaption {
     ._4-column-grid,
     ._4-column-grid.tablet-2-columns {
         grid-template-columns: 1fr;
+    }
+    ._4-column-grid.big-buttons {
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
     .search-icon-trigger {
         justify-content: center;
@@ -7896,7 +7918,7 @@ figcaption {
         margin-right: 1.4em;
     }
     .big-buttons-wrapper {
-        min-height: 160px;
+        min-height: 140px;
     }
     .centered-text.donate-cards {
         margin-bottom: 0;
@@ -7921,7 +7943,7 @@ figcaption {
         height: 89.775vw;
     }
     ._4-column-grid.big-buttons {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
     .search-icon-trigger {
         padding: 10px;

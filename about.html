@@ -50,6 +50,51 @@
             position: relative !important;
             z-index: 99999 !important;
             cursor: pointer !important;
+            pointer-events: auto !important;
+            display: block !important;
+        }
+        
+        .navbar.w-nav {
+            position: relative !important;
+            z-index: 9998 !important;
+        }
+        
+        .sticky-nav {
+            position: relative !important;
+            z-index: 9997 !important;
+        }
+        
+        .nav-grid-container {
+            position: relative !important;
+            z-index: 9996 !important;
+        }
+        
+        /* Ensure no overlay blocking the button */
+        header::after,
+        header::before {
+            display: none !important;
+        }
+        /* Decorative pattern should never block clicks */
+        .short-fur-pattern.hide-desktop { pointer-events: none !important; }
+
+        /* Class-based fallback open state for mobile menu */
+        @media screen and (max-width: 991px) {
+          header .w-nav .w-nav-menu.is-open {
+            display: block !important;
+            position: fixed !important;
+            inset: 0 !important;
+            background: #F5E6D3 !important;
+            z-index: 99998 !important;
+            overflow: auto !important;
+          }
+        }
+        
+        /* Make sure menu icon is visible */
+        .menu-icon-wrapper,
+        .menu-icon-wrapper img {
+            pointer-events: auto !important;
+            display: block !important;
+            visibility: visible !important;
         }
         
         /* Montserrat font for all text */
@@ -65,8 +110,17 @@
         }
         
         .about-header {
-            text-align: center;
+            text-align: left;
             margin-bottom: 60px;
+        }
+        
+        /* Remove checkmarks from Operating Hours list */
+        .info-box ul li::before {
+            content: none !important;
+        }
+        
+        .info-box ul li::marker {
+            content: none !important;
         }
         
         .about-header h1 {
@@ -131,7 +185,7 @@
             padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            text-align: center;
+            text-align: left;
             transition: transform 0.3s ease;
         }
         
@@ -156,7 +210,7 @@
         }
         
         .cta-section {
-            text-align: center;
+            text-align: left;
             padding: 60px 40px;
             background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
             border-radius: 20px;
@@ -199,7 +253,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             margin: 40px 0;
-            text-align: center;
+            text-align: left;
             max-width: 100%;
         }
         
@@ -280,6 +334,23 @@
                 font-size: 1.8em;
             }
         }
+
+        /* Extra-tight mobile typography for values section */
+        @media (max-width: 480px) {
+            /* "Why Choose Us" heading */
+            .values-section > h2 {
+                font-size: 1.8em !important;
+                line-height: 1.15 !important;
+                margin-bottom: 24px !important;
+            }
+            /* Cards headings: Personal Care, Clean and Cozy, Gentle and Patient, With Love and Respect, etc. */
+            .value-card h3 {
+                font-size: 1.2em !important;
+                line-height: 1.2 !important;
+                margin-bottom: 10px !important;
+                letter-spacing: 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -298,7 +369,7 @@
                         <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
                         <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
                         <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
-                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Visit Us</a></div>
                         <div class="nav-menu-item-6"><a href="shopping.html" class="nav-link">Shopping</a></div>
                         <div class="nav-menu-item-7"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                     </div>
@@ -329,27 +400,8 @@
             </div>
         </div>
 
-        <div class="stats-section">
-            <div class="stat-item">
-                <div class="number">5.0</div>
-                <div class="label">Google Rating</div>
-            </div>
-            <div class="stat-item">
-                <div class="number">200+</div>
-                <div class="label">Happy Pets</div>
-            </div>
-            <div class="stat-item">
-                <div class="number">100%</div>
-                <div class="label">Satisfaction</div>
-            </div>
-            <div class="stat-item">
-                <div class="number">9</div>
-                <div class="label">5-Star Reviews</div>
-            </div>
-        </div>
-
         <div class="values-section">
-            <h2 style="text-align: center; color: #7d5c3b; font-size: 2.5em; margin-bottom: 40px;">Why Choose Us</h2>
+            <h2 style="text-align: left; color: #7d5c3b; font-size: 2.5em; margin-bottom: 40px;">Why Choose Us</h2>
             
             <div class="values-grid">
                 <div class="value-card">
@@ -391,30 +443,10 @@
                 <li><strong>Tuesday:</strong> 7 PM – 10 PM</li>
                 <li><strong>Wednesday:</strong> Closed</li>
                 <li><strong>Thursday:</strong> 7 PM – 10 PM</li>
-                <li><strong>Friday:</strong> 7 PM – 10 PM</li>
+                <li><strong>Friday:</strong> Closed</li>
                 <li><strong>Saturday:</strong> 8 AM – 6 PM</li>
                 <li><strong>Sunday:</strong> 3 PM – 6 PM</li>
             </ul>
-        </div>
-
-        <div class="info-box">
-            <h3>🐶 Our Services Include</h3>
-            <ul>
-                <li>Full Grooming Packages (Bath, Haircut, Nail Trim, Ear Cleaning)</li>
-                <li>Mini Groom for Quick Touch-ups</li>
-                <li>Puppy's First Grooming Experience</li>
-                <li>Salt Spa Treatment for Relaxation</li>
-                <li>Daycare Services for Your Busy Days</li>
-                <li>Special Care for Senior Pets</li>
-            </ul>
-        </div>
-
-
-        <div style="text-align: center; margin-top: 60px;">
-            <h2 style="color: #7d5c3b; margin-bottom: 20px;">📍 Visit Us</h2>
-            <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;"><strong>Huggs Pawly Pet Grooming</strong></p>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">Blk 148 Yishun Street 11, Singapore 760148</p>
-            <a href="https://www.google.com/maps/place/Huggs+Pawly+Pet+Grooming/@1.4318806,103.829965,17z/data=!3m1!4b1!4m6!3m5!1s0x31da15886576fa3d:0x96e2a1e8b0e22df9!8m2!3d1.4318806!4d103.8325399!16s%2Fg%2F11sydgznx3?entry=ttu" target="_blank" class="button large w-button">Get Directions</a>
         </div>
     </div>
 
@@ -431,7 +463,7 @@
                     <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
-                    <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="reviews.html" class="nav-link footer">Visit Us</a>
                     <a href="shopping.html" class="nav-link footer">Shopping</a>
                     <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <div class="flex-horizontal socials-padding">

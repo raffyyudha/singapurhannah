@@ -51,6 +51,51 @@
             position: relative !important;
             z-index: 99999 !important;
             cursor: pointer !important;
+            pointer-events: auto !important;
+            display: block !important;
+        }
+        
+        .navbar.w-nav {
+            position: relative !important;
+            z-index: 9998 !important;
+        }
+        
+        .sticky-nav {
+            position: relative !important;
+            z-index: 9997 !important;
+        }
+        
+        .nav-grid-container {
+            position: relative !important;
+            z-index: 9996 !important;
+        }
+        
+        /* Ensure no overlay blocking the button */
+        header::after,
+        header::before {
+            display: none !important;
+        }
+        /* Decorative pattern should never block clicks */
+        .short-fur-pattern.hide-desktop { pointer-events: none !important; }
+
+        /* Class-based fallback open state for mobile menu */
+        @media screen and (max-width: 991px) {
+          header .w-nav .w-nav-menu.is-open {
+            display: block !important;
+            position: fixed !important;
+            inset: 0 !important;
+            background: #F5E6D3 !important;
+            z-index: 99998 !important;
+            overflow: auto !important;
+          }
+        }
+        
+        /* Make sure menu icon is visible */
+        .menu-icon-wrapper,
+        .menu-icon-wrapper img {
+            pointer-events: auto !important;
+            display: block !important;
+            visibility: visible !important;
         }
         
         /* Montserrat font for all text */
@@ -136,7 +181,7 @@
                         <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
                         <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
                         <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
-                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Visit Us</a></div>
                         <div class="nav-menu-item-6"><a href="shopping.html" class="nav-link">Shopping</a></div>
                         <div class="nav-menu-item-7"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                     </div>
@@ -169,7 +214,7 @@
                     <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
-                    <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="reviews.html" class="nav-link footer">Visit Us</a>
                     <a href="shopping.html" class="nav-link footer">Shopping</a>
                     <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <div class="flex-horizontal socials-padding">

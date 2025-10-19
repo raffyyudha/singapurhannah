@@ -50,6 +50,51 @@
             position: relative !important;
             z-index: 99999 !important;
             cursor: pointer !important;
+            pointer-events: auto !important;
+            display: block !important;
+        }
+        
+        .navbar.w-nav {
+            position: relative !important;
+            z-index: 9998 !important;
+        }
+        
+        .sticky-nav {
+            position: relative !important;
+            z-index: 9997 !important;
+        }
+        
+        .nav-grid-container {
+            position: relative !important;
+            z-index: 9996 !important;
+        }
+        
+        /* Ensure no overlay blocking the button */
+        header::after,
+        header::before {
+            display: none !important;
+        }
+        /* Decorative pattern should never block clicks */
+        .short-fur-pattern.hide-desktop { pointer-events: none !important; }
+
+        /* Class-based fallback open state for mobile menu */
+        @media screen and (max-width: 991px) {
+          header .w-nav .w-nav-menu.is-open {
+            display: block !important;
+            position: fixed !important;
+            inset: 0 !important;
+            background: #F5E6D3 !important;
+            z-index: 99998 !important;
+            overflow: auto !important;
+          }
+        }
+        
+        /* Make sure menu icon is visible */
+        .menu-icon-wrapper,
+        .menu-icon-wrapper img {
+            pointer-events: auto !important;
+            display: block !important;
+            visibility: visible !important;
         }
         
         /* Montserrat font for all text */
@@ -62,6 +107,52 @@
             padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        
+        /* Daycare info section with image */
+        .daycare-info-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px 20px;
+        }
+        
+        .daycare-info-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .daycare-info-image img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .daycare-info-text h2 {
+            font-size: 1.8em !important;
+            margin-bottom: 15px !important;
+            color: #7d5c3b;
+        }
+        
+        .daycare-info-text p {
+            font-size: 1em !important;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .daycare-info-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .daycare-info-image img {
+                max-height: 250px;
+            }
         }
         
         .daycare-header {
@@ -254,6 +345,16 @@
             .pricing-table td:first-child {
                 font-size: 0.95em;
             }
+            
+            /* Tighter mobile typography for info section */
+            .daycare-info-text h2 {
+                font-size: 1.4em !important;
+                line-height: 1.2 !important;
+                margin-bottom: 10px !important;
+            }
+            .daycare-info-text p {
+                font-size: 0.95em !important;
+            }
         }
     </style>
 </head>
@@ -273,7 +374,7 @@
                         <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
                         <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
                         <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
-                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
+                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Visit Us</a></div>
                         <div class="nav-menu-item-6"><a href="shopping.html" class="nav-link">Shopping</a></div>
                         <div class="nav-menu-item-7"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
                     </div>
@@ -291,6 +392,18 @@
             <h1>Daycare Services</h1>
             <p>Professional care for your furry friend while you're away</p>
         </div>
+
+        <section class="daycare-info-section">
+            <div class="daycare-info-content">
+                <div class="daycare-info-image">
+                    <img src="assets/images/daycare.jpg" alt="Happy Dog at Daycare" />
+                </div>
+                <div class="daycare-info-text">
+                    <h2>Why Choose Our Daycare?</h2>
+                    <p>Our daycare service provides a safe, fun, and engaging environment for your pet. With professional supervision and plenty of playtime, your furry friend will have the best day while you're away!</p>
+                </div>
+            </div>
+        </section>
 
         <div class="daycare-hero">
             <h2>DAYCARE SERVICE</h2>
@@ -367,7 +480,7 @@
                     <a href="about.html" class="nav-link footer">About Us</a>
                 </div>
                 <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
-                    <a href="reviews.html" class="nav-link footer">Reviews</a>
+                    <a href="reviews.html" class="nav-link footer">Visit Us</a>
                     <a href="shopping.html" class="nav-link footer">Shopping</a>
                     <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
                     <div class="flex-horizontal socials-padding">
