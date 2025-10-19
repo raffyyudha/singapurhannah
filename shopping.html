@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Daycare Services - Huggs Pawly</title>
-    <meta content="Professional daycare services for dogs, cats, rabbits, and guinea pigs. Half day and full day options available." name="description" />
-    <meta content="Daycare Services - Huggs Pawly" property="og:title" />
+    <title>Shopping - Huggs Pawly</title>
+    <meta content="Shop our pet products on Shopee" name="description" />
+    <meta content="Shopping - Huggs Pawly" property="og:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="refresh" content="0; url=https://sg.shp.ee/6WJFe6N">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,206 +47,68 @@
         }
         
         /* Montserrat font for all text */
-        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td {
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
             font-family: 'Montserrat', sans-serif !important;
         }
-    </style>
-    <style>
-        .daycare-section {
+        
+        .shopping-section {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .daycare-header {
             text-align: center;
-            margin-bottom: 60px;
         }
         
-        .daycare-header h1 {
-            font-size: 2.5em;
-            color: #8B6F47;
+        .shopping-section h1 {
+            font-size: 3em;
+            color: #7d5c3b;
             margin-bottom: 20px;
         }
         
-        .daycare-header p {
-            font-size: 1.2em;
-            color: #666;
-        }
-        
-        .daycare-hero {
-            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin-bottom: 60px;
-            text-align: center;
-            color: #000;
-        }
-        
-        .daycare-hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .daycare-hero .subtitle {
+        .shopping-section p {
             font-size: 1.3em;
-            margin-bottom: 30px;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            color: #666;
             margin-bottom: 40px;
         }
         
-        .pricing-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ddd;
-            table-layout: fixed;
-        }
-        
-        
-        
-        .pricing-table th {
-            background: #F5E6D3;
-            color: white;
-            padding: 15px;
-            text-align: center;
+        .shopee-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #ee4d2d 0%, #ff6b3d 100%);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: bold;
-            text-transform: uppercase;
-            border: 1px solid #ddd;
-            vertical-align: middle;
-        }
-        
-        .pricing-table th:first-child {
-            text-align: left;
-            min-width: 150px;
-        }
-        
-        .pricing-table td {
-            padding: 15px;
-            border: 1px solid #ddd;
-            text-align: center;
-            vertical-align: middle;
-            background: white;
-        }
-        
-        .pricing-table td:first-child {
-            text-align: left;
-            font-weight: 600;
-            color: #b8824f;
-            font-size: 1.1em;
-        }
-        
-        .pricing-table tbody tr:hover td {
-            background: #f9f9f9;
-        }
-        
-        .price {
             font-size: 1.3em;
-            font-weight: bold;
-            color: #8B6F47;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 25px rgba(238, 77, 45, 0.4);
         }
         
-        .features-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
+        .shopee-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(238, 77, 45, 0.6);
         }
         
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
+        .redirect-notice {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #999;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .feature-card h3 {
-            color: #b8824f;
-            margin-bottom: 10px;
-        }
-        
-        .testimonial-box {
-            background: #fff9f0;
-            border-left: 4px solid #b8824f;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 40px 0;
-            font-style: italic;
-            color: #666;
-        }
-        
-        .testimonial-box p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        
-        /* Mobile responsive */
         @media (max-width: 768px) {
-            .daycare-section {
-                padding: 40px 15px;
+            .shopping-section h1 {
+                font-size: 2em;
             }
             
-            .daycare-hero {
-                padding: 40px 20px;
-            }
-            
-            .daycare-hero h2 {
-                font-size: 1.8em;
-            }
-            
-            .daycare-hero .subtitle {
+            .shopping-section p {
                 font-size: 1.1em;
             }
             
-            .pricing-card {
-                padding: 20px 15px;
-            }
-            
-            .pricing-table th,
-            .pricing-table td {
-                padding: 10px 8px;
-                font-size: 0.9em;
-            }
-            
-            .price {
+            .shopee-button {
+                padding: 15px 35px;
                 font-size: 1.1em;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .daycare-header h1 {
-                font-size: 1.8em;
-            }
-            
-            .daycare-hero h2 {
-                font-size: 1.5em;
-            }
-            
-            .pricing-table th,
-            .pricing-table td {
-                padding: 8px 5px;
-                font-size: 0.85em;
-            }
-            
-            .pricing-table td:first-child {
-                font-size: 0.95em;
             }
         }
     </style>
@@ -279,72 +142,11 @@
         </div>
     </header>
 
-    <div class="daycare-section">
-        <div class="daycare-header">
-            <h1>Daycare Services</h1>
-            <p>Professional care for your furry friend while you're away</p>
-        </div>
-
-        <div class="daycare-hero">
-            <h2>DAYCARE SERVICE</h2>
-            <p class="subtitle">Paws and playtime, here I come!</p>
-        </div>
-
-        <div class="pricing-card">
-            <table class="pricing-table">
-                <thead>
-                    <tr>
-                        <th>FUR KID</th>
-                        <th>HALF DAY<br/>(6HRS)</th>
-                        <th>FULL DAY<br/>(12HRS)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>SMALL</td>
-                        <td><span class="price">$25</span></td>
-                        <td><span class="price">$40</span></td>
-                    </tr>
-                    <tr>
-                        <td>MEDIUM</td>
-                        <td><span class="price">$30</span></td>
-                        <td><span class="price">$45</span></td>
-                    </tr>
-                    <tr>
-                        <td>BUNNY</td>
-                        <td><span class="price">$10</span></td>
-                        <td><span class="price">$15</span></td>
-                    </tr>
-                    <tr>
-                        <td>GUINEA PIG</td>
-                        <td><span class="price">$10</span></td>
-                        <td><span class="price">$15</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="features-section">
-            <div class="feature-card">
-                <h3>Active Playtime</h3>
-            </div>
-            <div class="feature-card">
-                <h3>Safe Environment</h3>
-            </div>
-            <div class="feature-card">
-                <h3>Socialisation</h3>
-            </div>
-            <div class="feature-card">
-                <h3>Meals and Snacks</h3>
-            </div>
-            <div class="feature-card">
-                <h3>Photo Updates</h3>
-            </div>
-            <div class="feature-card">
-                <h3>Rest Time</h3>
-            </div>
-        </div>
-
+    <div class="shopping-section">
+        <h1>🛍️ Shop Our Products</h1>
+        <p>Visit our Shopee store for pet grooming products and accessories!</p>
+        <a href="https://sg.shp.ee/6WJFe6N" class="shopee-button" target="_blank">Visit Our Shopee Store</a>
+        <p class="redirect-notice">You will be redirected to Shopee in a moment...</p>
     </div>
 
     <footer data-w-id="e390ad44-2592-9581-74e8-99c94401d838" class="footer">

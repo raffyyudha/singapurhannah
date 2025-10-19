@@ -336,6 +336,39 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            
+            /* Fix mobile menu background - FULL WIDTH */
+            .w-nav-menu {
+                background-color: #000 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                position: fixed !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin: 0 !important;
+                padding: 20px 0 !important;
+            }
+            
+            .nav-menu {
+                background-color: #000 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                position: fixed !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .nav-menu .short-fur-pattern {
+                display: none !important;
+                opacity: 0 !important;
+            }
+            
+            .w-nav-overlay {
+                width: 100vw !important;
+                left: 0 !important;
+                right: 0 !important;
+            }
         }
         
         .button,
@@ -440,6 +473,24 @@
 
         .white-section-split .profile-card-half:first-child .badge-outline-2 h6 {
             color: #fff !important;
+        }
+        
+        /* Reduce font size for Pet Boarding Details on mobile */
+        @media (max-width: 767px) {
+            .white-section-split .heading-16-navy {
+                font-size: 0.9em !important;
+                line-height: 1.3 !important;
+                margin-bottom: 20px !important;
+                padding-bottom: 10px !important;
+            }
+            
+            .white-section-split .profile-card-half {
+                min-height: auto !important;
+            }
+            
+            .white-section-split .content-padding {
+                padding: 20px 15px !important;
+            }
         }
 
         .white-section-split .profile-card-half:nth-child(2) {
@@ -549,6 +600,54 @@
             padding: 0 20px;
         }
         
+        /* Our Commitment section styling */
+        .commitment-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .commitment-section .about-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 0 !important;
+        }
+        
+        .commitment-section .about-image img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        
+        .commitment-section .about-text h2 {
+            font-size: 1.8em !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .commitment-section .about-text p {
+            font-size: 1em !important;
+            margin-bottom: 15px;
+        }
+        
+        .commitment-section .about-text ul {
+            font-size: 0.95em !important;
+            line-height: 1.8 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .commitment-section .about-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .commitment-section .about-image img {
+                max-height: 250px;
+            }
+        }
+        
         @media (max-width: 991px) {
             ._4-column-grid.big-buttons {
                 grid-template-columns: repeat(3, 1fr);
@@ -646,8 +745,9 @@
                         <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
                         <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
                         <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Reviews</a></div>
-                        <div class="nav-menu-item-6"><a href="terms.html" class="nav-link">Terms & Conditions</a></div>
-                        <a id="w-node-bb0bf636-1622-2bac-85b3-47f867d5301a-67d5300b" href="https://wa.me/6596109951" class="navigation-button w-button">Book Now</a></div>
+                        <div class="nav-menu-item-6"><a href="shopping.html" class="nav-link">Shopping</a></div>
+                        <div class="nav-menu-item-7"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
+                    </div>
                     <div
                         class="short-fur-pattern hide-desktop"></div>
             </nav>
@@ -686,7 +786,7 @@
                                 <div data-is-ix2-target="1" class="big-lottie-icon" data-w-id="5906aa4f-658d-435f-20de-ea658b59ec88" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/63d538501c71e03cdfed9889_Adoptable_Volunteer.json"
                                     data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1" data-duration="0"></div>
                             </div>
-                            <h3 class="cta-text">Explore Day Services</h3>
+                            <h3 class="cta-text">Explore Daycare</h3>
                         </div>
                     </div>
                 </a>
@@ -733,7 +833,7 @@
                     <div class="content-padding profile-card-full">
                         <div class="short-fur-pattern"></div>
                         <div class="profile-descriptor-dark">
-                            <h3 class="heading-16-navy">Already Booked via WhatsApp?<br>Fill Out the Form!</h3>
+                            <h3 class="heading-16-navy">Pet Boarding Details - Please WhatsApp us first to check availability before filling the form.</h3>
                             <div class="badge-outline-2">
                                 <h6>Complete Details</h6>
                             </div>
@@ -751,76 +851,32 @@
         <div class="container-1100">
             <div class="content-padding centered-content">
                 <h2 class="heading-4">Visit Our Salon 📍</h2>
-                <p class="paragraph">We are conveniently located at <strong>Huggs Pawly Pet Grooming, Blk 148 Yishun Street 11, Singapore 760148</strong>. Come visit us for a premium grooming experience for your beloved pets. We provide personalized, safe, and professional care with compassion and integrity. We look forward to welcoming you and your furry friend!</p>
+                <p class="paragraph">We are located at <strong>Huggs Pawly Pet Grooming, Blk 148 Yishun Street 11, Singapore 760148</strong>.</p>
                 <a
                     href="https://www.google.com/maps/place/Huggs+Pawly+Pet+Grooming/@1.4318806,103.829965,17z/data=!3m1!4b1!4m6!3m5!1s0x31da15886576fa3d:0x96e2a1e8b0e22df9!8m2!3d1.4318806!4d103.8325399!16s%2Fg%2F11sydgznx3?entry=ttu" target="_blank" class="button large w-button">Get Directions</a>
             </div>
         </div>
     </section>
-    <section class="section wide">
-        <div class="centered-text bottom-margin-3em">
-            <h2 class="heading-5">Success Stories</h2>
-        </div>
-        <div class="slider-container">
-            <div data-delay="6000" data-animation="slide" class="testimonial-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="6" data-duration="500" data-infinite="true">
-                <div class="testimonial-mask w-slider-mask">
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-grid">
-                            <div class="circle-image-wrapper"><img src="assets/images/63d538501c71e0133eed9885_Adoptable_Spark%20Right_light%20blue.svg" alt="" class="slider-spark" />
-                                <div class="circle-image-mask"><img src="https://randomuser.me/api/portraits/women/45.jpg" width="390" loading="lazy" alt="Amanda L." /></div>
-                            </div>
-                            <div id="w-node-f5939f72-e415-e0ff-65d2-daf64258a811-4ced9819" class="card slider-offset">
-                                <div class="centered-text slider-offset">
-                                    <p style="opacity:0" class="large-text">I can't say enough amazing things about <strong>Huggs Pawly</strong>. They are truly the best groomers. Sarah is amazing and will take the time to really get to know your dogs. We would not trust anyone else with our dogs Coco and Lucky. They are extremely detailed and make sure they groom them exactly the way you want. Their customer service is great and our dogs love going there. You can tell that they truly care about our dogs and they really listen to what you want. They are the best!!!!!</p>
-                                    <div style="opacity:0" class="squiggle-container"><img src="assets/images/63d538501c71e0fee1ed9874_Adoptable_Wiggle%20Style%201_light%20blue.svg" width="150" loading="lazy" alt="" class="squiggle" /></div>
-                                    <div style="opacity:0"
-                                        class="large-text"><strong>Amanda L.</strong></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-grid">
-                            <div class="circle-image-wrapper"><img src="assets/images/63d538501c71e0133eed9885_Adoptable_Spark%20Right_light%20blue.svg" alt="" class="slider-spark" />
-                                <div class="circle-image-mask"><img src="https://randomuser.me/api/portraits/men/32.jpg" width="390" loading="lazy" alt="Matt R." /></div>
-                            </div>
-                            <div id="w-node-_75bed33a-2617-a42b-d44a-a7c68ddca047-4ced9819" class="card slider-offset">
-                                <div class="centered-text slider-offset">
-                                    <p style="opacity:0" class="large-text">Huggs Pawly is exactly what we needed for Brewski! It was such a relief finding groomers who you could tell genuinely cared about our dog and about us. Brewski was an old dog when we started going to Huggs Pawly. He
-                                        moved slow and unsteady and all of the staff was so patient and good with him. They knew him by name right away and knew how to make him feel comfortable from the moment he arrived until the time he left. Such a
-                                        positive experience that we&#x27;ve not had prior to Huggs Pawly. Thanks for loving Brewski like he was your own, he loved you guys!</p>
-                                    <div style="opacity:0" class="squiggle-container"><img src="assets/images/63d538501c71e0fee1ed9874_Adoptable_Wiggle%20Style%201_light%20blue.svg" width="150" alt="" class="squiggle" /></div>
-                                    <div style="opacity:0" class="large-text"><strong>Matt R.</strong></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide w-slide">
-                        <div class="testimonial-grid">
-                            <div class="circle-image-wrapper"><img src="assets/images/63d538501c71e0133eed9885_Adoptable_Spark%20Right_light%20blue.svg" alt="" class="slider-spark" />
-                                <div class="circle-image-mask"><img src="https://randomuser.me/api/portraits/men/52.jpg" width="390" loading="lazy" alt="James T." /></div>
-                            </div>
-                            <div id="w-node-_0a8a8612-7b4c-4680-6340-4c824661ce05-4ced9819" class="card slider-offset">
-                                <div class="centered-text slider-offset">
-                                    <p style="opacity:0" class="large-text">This was Max's, my 4 month old Golden Retriever's, first grooming experience at <strong>Huggs Pawly</strong>. The staff was amazing and took great care of him. They made sure he was comfortable and not stressed over the experience. They also gave
-                                        me a lot of great tips for keeping him well groomed. I would highly recommend Huggs Pawly for pet grooming!</p>
-                                    <div style="opacity:0" class="squiggle-container"><img src="assets/images/63d538501c71e0fee1ed9874_Adoptable_Wiggle%20Style%201_light%20blue.svg" width="150" alt="" class="squiggle" /></div>
-                                    <div style="opacity:0" class="large-text"><strong>James T.</strong></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="left-arrow hide-on-mobile w-slider-arrow-left">
-                    <div class="arrow-padding"><img src="assets/images/63d538501c71e01c49ed98ab_Icons_Adoptable_Purple_Arrow%20Left.svg" width="24" loading="lazy" id="w-node-d2bed5c3-b2bf-15c6-19d2-1aab90f83ac9-4ced9819" alt="" /></div>
-                </div>
-                <div class="right-arrow hide-on-mobile w-slider-arrow-right">
-                    <div class="arrow-padding"><img src="assets/images/63d538501c71e035f5ed9879_Icons_Adoptable_Purple_Arrow%20Right.svg" width="24" loading="lazy" id="w-node-d2bed5c3-b2bf-15c6-19d2-1aab90f83acb-4ced9819" alt="" /></div>
-                </div>
-                <div class="slide-nav hide w-slider-nav w-slider-nav-invert w-round"></div>
+    
+    <section class="section commitment-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images/ourstory2.jpg" alt="Happy Dog" style="border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);" />
+            </div>
+            <div class="about-text">
+                <h2 style="color: #7d5c3b;">Our Commitment</h2>
+                <p style="color: #555;">At Huggs Pawly, we understand that your pet is not just an animal—they're family. That's why we're committed to:</p>
+                <ul style="color: #555; list-style: none; padding-left: 0;">
+                    <li>✓ Providing a stress-free grooming experience</li>
+                    <li>✓ Using gentle handling techniques</li>
+                    <li>✓ Maintaining open communication with pet parents</li>
+                    <li>✓ Continuous improvement of our skills and services</li>
+                    <li>✓ Creating a welcoming environment for all pets</li>
+                </ul>
             </div>
         </div>
     </section>
+    
     <footer data-w-id="e390ad44-2592-9581-74e8-99c94401d838" class="footer">
         <div class="container-1440">
             <div class="footer-grid">
