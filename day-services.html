@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.barkshopdm.com" data-wf-page="63d5384f1c71e0c14ced9819" data-wf-site="63d5384f1c71e0fe90ed94db">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Daycare Services - Huggs Pawly</title>
+    <meta content="Professional daycare services for dogs, cats, rabbits, and guinea pigs. Half day and full day options available." name="description" />
+    <meta content="Daycare Services - Huggs Pawly" property="og:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png" />
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/mobile-menu-fix.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Footer styling - BLACK background WHITE text */
+        .footer {
+            background-color: #000 !important;
+        }
+        
+        .footer .nav-link,
+        .footer a,
+        .footer-links-container a {
+            color: #fff !important;
+        }
+        
+        .footer .nav-link:hover,
+        .footer a:hover {
+            color: #ccc !important;
+        }
+        
+        .footer-grid {
+            background-color: transparent !important;
+        }
+        
+        .footer .short-fur-pattern {
+            opacity: 0.1;
+        }
+        
+        .social-links img,
+        .social-links svg {
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links-container:first-child {
+            justify-content: flex-start !important;
+        }
+        
+        /* Fix hamburger menu clickability */
+        .menu-button.w-nav-button {
+            position: relative !important;
+            z-index: 99999 !important;
+            cursor: pointer !important;
+            pointer-events: auto !important;
+            display: block !important;
+        }
+        
+        .navbar.w-nav {
+            position: relative !important;
+            z-index: 9998 !important;
+        }
+        
+        .sticky-nav {
+            position: relative !important;
+            z-index: 9997 !important;
+        }
+        
+        .nav-grid-container {
+            position: relative !important;
+            z-index: 9996 !important;
+        }
+        
+        /* Ensure no overlay blocking the button */
+        header::after,
+        header::before {
+            display: none !important;
+        }
+        /* Decorative pattern should never block clicks */
+        .short-fur-pattern.hide-desktop { pointer-events: none !important; }
+
+        /* Class-based fallback open state for mobile menu */
+        @media screen and (max-width: 991px) {
+          header .w-nav .w-nav-menu.is-open {
+            display: block !important;
+            position: fixed !important;
+            inset: 0 !important;
+            background: #F5E6D3 !important;
+            z-index: 99998 !important;
+            overflow: auto !important;
+          }
+        }
+        
+        /* Make sure menu icon is visible */
+        .menu-icon-wrapper,
+        .menu-icon-wrapper img {
+            pointer-events: auto !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+        /* Montserrat font for all text */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div, th, td {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
+    <style>
+        .daycare-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Daycare info section with image */
+        .daycare-info-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px 20px;
+        }
+        
+        .daycare-info-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .daycare-info-image img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .daycare-info-text h2 {
+            font-size: 1.8em !important;
+            margin-bottom: 15px !important;
+            color: #7d5c3b;
+        }
+        
+        .daycare-info-text p {
+            font-size: 1em !important;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .daycare-info-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .daycare-info-image img {
+                max-height: 250px;
+            }
+        }
+        
+        .daycare-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .daycare-header h1 {
+            font-size: 3em;
+            color: #8B6F47;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .daycare-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .daycare-hero {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E5D6C3 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #000;
+        }
+        
+        .daycare-hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .daycare-hero .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            table-layout: fixed;
+        }
+        
+        
+        
+        .pricing-table th {
+            background: #F5E6D3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        
+        .pricing-table th:first-child {
+            text-align: left;
+            min-width: 150px;
+        }
+        
+        .pricing-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+            background: white;
+        }
+        
+        .pricing-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #b8824f;
+            font-size: 1.1em;
+        }
+        
+        .pricing-table tbody tr:hover td {
+            background: #f9f9f9;
+        }
+        
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8B6F47;
+        }
+        
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: #b8824f;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-box {
+            background: #fff9f0;
+            border-left: 4px solid #b8824f;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .testimonial-box p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .daycare-section {
+                padding: 40px 15px;
+            }
+            
+            .daycare-hero {
+                padding: 40px 20px;
+            }
+            
+            .daycare-hero h2 {
+                font-size: 1.8em;
+            }
+            
+            .daycare-hero .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .pricing-card {
+                padding: 20px 15px;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px 8px;
+                font-size: 0.9em;
+            }
+            
+            .price {
+                font-size: 1.1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .daycare-header h1 {
+                font-size: 1.8em;
+            }
+            
+            .daycare-hero h2 {
+                font-size: 1.5em;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 8px 5px;
+                font-size: 0.85em;
+            }
+            
+            .pricing-table td:first-child {
+                font-size: 0.95em;
+            }
+            
+            /* Tighter mobile typography for info section */
+            .daycare-info-text h2 {
+                font-size: 1.4em !important;
+                line-height: 1.2 !important;
+                margin-bottom: 10px !important;
+            }
+            .daycare-info-text p {
+                font-size: 0.95em !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="nav" class="sticky-nav">
+        <div data-animation="over-right" class="navbar w-nav" data-easing2="ease-in-out" data-easing="ease-in-out" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
+            <div class="nav-grid-container">
+                <div id="w-node-da75a56e-7b3b-26b8-c721-a123e3e4a8ff-67d5300b">
+                    <a href="index.html" class="link-block-2 w-inline-block">
+                        <img src="assets/images/logo.png" loading="lazy" width="150" alt="Huggs Pawly" class="image" style="object-fit: contain; display: block;"/>
+                    </a>
+                </div>
+                <nav role="navigation" id="w-node-bb0bf636-1622-2bac-85b3-47f867d53010-67d5300b" class="nav-menu w-nav-menu">
+                    <div class="nav-menu-wrapper">
+                        <div class="nav-menu-item-1"><a href="index.html" class="nav-link">Home</a></div>
+                        <div class="nav-menu-item-2"><a href="grooming-packages.html" class="nav-link">Grooming Rates</a></div>
+                        <div class="nav-menu-item-3"><a href="day-services.html" class="nav-link">Daycare</a></div>
+                        <div class="nav-menu-item-4"><a href="about.html" class="nav-link">About Us</a></div>
+                        <div class="nav-menu-item-5"><a href="reviews.html" class="nav-link">Visit Us</a></div>
+                        <div class="nav-menu-item-6"><a href="shopping.html" class="nav-link">Shopping</a></div>
+                        <div class="nav-menu-item-7"><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></div>
+                    </div>
+                    <div class="short-fur-pattern hide-desktop"></div>
+                </nav>
+                <div id="w-node-bb0bf636-1622-2bac-85b3-47f867d53020-67d5300b" data-w-id="bb0bf636-1622-2bac-85b3-47f867d53020" class="menu-button w-nav-button">
+                    <div class="menu-icon-wrapper margin-right"><img src="assets/images/63d538501c71e0be50ed9883_Icons_Adoptable_Purple_Hamburger.svg" alt="" class="icon" /></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="daycare-section">
+        <div class="daycare-header">
+            <h1>Daycare Services</h1>
+            <p>Professional care for your furry friend while you're away</p>
+        </div>
+
+        <section class="daycare-info-section">
+            <div class="daycare-info-content">
+                <div class="daycare-info-image">
+                    <img src="assets/images/daycare.jpg" alt="Happy Dog at Daycare" />
+                </div>
+                <div class="daycare-info-text">
+                    <h2>Why Choose Our Daycare?</h2>
+                    <p>Our daycare service provides a safe, fun, and engaging environment for your pet. With professional supervision and plenty of playtime, your furry friend will have the best day while you're away!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="daycare-hero">
+            <h2>DAYCARE SERVICE</h2>
+            <p class="subtitle">Paws and playtime, here I come!</p>
+        </div>
+
+        <div class="pricing-card">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>FUR KID</th>
+                        <th>HALF DAY<br/>(6HRS)</th>
+                        <th>FULL DAY<br/>(12HRS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SMALL</td>
+                        <td><span class="price">$25</span></td>
+                        <td><span class="price">$40</span></td>
+                    </tr>
+                    <tr>
+                        <td>MEDIUM</td>
+                        <td><span class="price">$30</span></td>
+                        <td><span class="price">$45</span></td>
+                    </tr>
+                    <tr>
+                        <td>BUNNY</td>
+                        <td><span class="price">$10</span></td>
+                        <td><span class="price">$15</span></td>
+                    </tr>
+                    <tr>
+                        <td>GUINEA PIG</td>
+                        <td><span class="price">$10</span></td>
+                        <td><span class="price">$15</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <h3>Active Playtime</h3>
+            </div>
+            <div class="feature-card">
+                <h3>Safe Environment</h3>
+            </div>
+            <div class="feature-card">
+                <h3>Socialisation</h3>
+            </div>
+            <div class="feature-card">
+                <h3>Meals and Snacks</h3>
+            </div>
+            <div class="feature-card">
+                <h3>Photo Updates</h3>
+            </div>
+            <div class="feature-card">
+                <h3>Rest Time</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <footer data-w-id="e390ad44-2592-9581-74e8-99c94401d838" class="footer">
+        <div class="container-1440">
+            <div class="footer-grid">
+                <div id="w-node-e390ad44-2592-9581-74e8-99c94401d83a-4401d838" class="footer-links-container">
+                    <div class="adoptable-a-lottie"><img src="assets/images/logo.png" alt="Huggs Pawly" width="120" /></div>
+                </div>
+                <div id="w-node-e390ad44-2592-9581-74e8-99c94401d84c-4401d838" class="footer-links-container">
+                    <a href="index.html" class="nav-link footer">Home</a>
+                    <a href="grooming-packages.html" class="nav-link footer">Grooming Rates</a>
+                    <a href="day-services.html" class="nav-link footer">Daycare</a>
+                    <a href="about.html" class="nav-link footer">About Us</a>
+                </div>
+                <div id="w-node-e390ad44-2592-9581-74e8-99c94401d853-4401d838" class="footer-links-container">
+                    <a href="reviews.html" class="nav-link footer">Visit Us</a>
+                    <a href="shopping.html" class="nav-link footer">Shopping</a>
+                    <a href="terms.html" class="nav-link footer">Terms &amp; Conditions</a>
+                    <div class="flex-horizontal socials-padding">
+                        <a href="https://www.instagram.com/huggspawly/" target="_blank" class="social-links w-inline-block">
+                            <img src="assets/images/63d538501c71e03415ed9908_Icons_Adoptable_White_Instagram.svg" alt="Instagram" />
+                        </a>
+                        <a href="https://www.tiktok.com/@huggs.pawly" target="_blank" class="social-links w-inline-block">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="short-fur-pattern bigger lighter"></div>
+    </footer>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63d5384f1c71e0fe90ed94db" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.schunk.1a807f015b216e46.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.schunk.45176a9a1d3fbf93.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.schunk.148d3795dd38d54f.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.schunk.0a06e62850f872ef.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.schunk.7d6ed723a5264309.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/63d5384f1c71e0fe90ed94db/js/webflow.b66b3f86.c3fd2b64c19ec686.js" type="text/javascript"></script>
+</body>
+
+</html>

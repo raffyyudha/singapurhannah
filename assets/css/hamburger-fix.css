@@ -1,0 +1,43 @@
+/* Hamburger menu position fix - Force all pages to match terms.html */
+.menu-button.w-nav-button {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 99999 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the nav container doesn't interfere */
+.sticky-nav,
+.navbar.w-nav,
+.nav-grid-container {
+  position: relative !important;
+  z-index: auto !important;
+}
+
+/* Remove any potential overlays blocking the button */
+header::after,
+header::before {
+  display: none !important;
+}
+
+/* Make sure menu icon is visible */
+.menu-icon-wrapper,
+.menu-icon-wrapper img {
+  pointer-events: auto !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* On desktop, the button should not be fixed */
+@media screen and (min-width: 992px) {
+  .menu-button.w-nav-button {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+  }
+}

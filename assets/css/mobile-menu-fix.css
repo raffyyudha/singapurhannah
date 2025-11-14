@@ -1,0 +1,214 @@
+/* FORCE 3 COLUMNS FOR BIG BUTTONS ON ALL MOBILE SIZES - HIGHEST PRIORITY */
+@media screen and (max-width: 991px) {
+  /* Show and style burger on all pages */
+  header .menu-button.w-nav-button { display: block !important; position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; }
+
+/* Global: unify main page titles to match Terms & Conditions */
+.about-header h1,
+.reviews-section h1,
+.shopping-section h1,
+.terms-header h1,
+.pricing-header h1,
+.spa-header h1,
+.daycare-header h1 {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #8B6F47 !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .about-header h1,
+  .reviews-section h1,
+  .shopping-section h1,
+  .terms-header h1,
+  .pricing-header h1,
+  .spa-header h1,
+  .daycare-header h1 {
+    font-size: 1.6em !important;
+    line-height: 1.2 !important;
+  }
+}
+
+  /* Opened mobile menu overlay (supports Webflow attribute and class) */
+  header .w-nav .w-nav-menu.is-open,
+  header .w-nav .w-nav-menu[data-nav-menu-open] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: #000 !important;
+    z-index: 99998 !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Fallback: center inner wrapper if present */
+  header .w-nav .w-nav-menu.is-open .nav-menu-wrapper,
+  header .w-nav .w-nav-menu[data-nav-menu-open] .nav-menu-wrapper {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+  }
+
+  header .w-nav .w-nav-menu.is-open a.nav-link,
+  header .w-nav .w-nav-menu[data-nav-menu-open] a.nav-link {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+    padding: 10px 0 !important;
+    color: #fff !important;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+    .section.wide.white .container-1440 ._4-column-grid.big-buttons,
+    section.section.wide.white div.container-1440 div._4-column-grid.big-buttons,
+    ._4-column-grid.big-buttons {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: auto !important;
+        gap: 10px !important;
+    }
+    
+    /* Ensure all 3 icons are visible */
+    .big-buttons-wrapper {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Prevent overflow clipping */
+    .section.wide.white,
+    .container-1440,
+    ._4-column-grid.big-buttons,
+    .big-buttons-wrapper,
+    .lottie-animation,
+    .content-padding,
+    .big-lottie-icons-wrapper,
+    .big-lottie-icon {
+        overflow: visible !important;
+    }
+    
+    /* Ensure card has enough height and SVG not clipped */
+    .big-buttons-wrapper { min-height: 180px !important; }
+    .big-lottie-icon svg { overflow: visible !important; }
+}
+
+/* Header logo sizing (mobile only) */
+@media screen and (max-width: 991px) {
+  header#nav .link-block-2 img.image {
+    width: clamp(160px, 44vw, 200px) !important;
+    height: auto !important;
+  }
+}
+
+/* Hide ticker by default (desktop) */
+.mobile-ticker { display: none; }
+
+/* Mobile ticker under logo */
+@media screen and (max-width: 991px) {
+  .mobile-ticker {
+    display: block !important;
+    width: 100%;
+    background: #f7efe5; /* soft beige */
+    color: #7d5c3b;      /* brand brown */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  .mobile-ticker .track {
+    display: inline-block;
+    padding: 10px 0;
+    animation: ticker-scroll 28s linear infinite;
+  }
+  .mobile-ticker .separator { opacity: .5; padding: 0 12px; }
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media screen and (max-width: 767px) {
+    .section.wide.white .container-1440 ._4-column-grid.big-buttons,
+    section.section.wide.white div.container-1440 div._4-column-grid.big-buttons,
+    ._4-column-grid.big-buttons {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: auto !important;
+        gap: 10px !important;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .section.wide.white .container-1440 ._4-column-grid.big-buttons,
+    section.section.wide.white div.container-1440 div._4-column-grid.big-buttons,
+    ._4-column-grid.big-buttons {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: auto !important;
+        gap: 8px !important;
+    }
+}
+
+/* Final stabilization for homepage big buttons (mobile) */
+@media screen and (max-width: 991px) {
+  ._4-column-grid.big-buttons > a { min-width: 0 !important; }
+  ._4-column-grid.big-buttons .content-padding { padding-top: 8px !important; padding-bottom: 8px !important; }
+  ._4-column-grid.big-buttons .big-lottie-icons-wrapper { width: 72px !important; height: 72px !important; margin: 0 auto !important; }
+  ._4-column-grid.big-buttons .big-lottie-icon,
+  ._4-column-grid.big-buttons .big-lottie-icon svg { width: 100% !important; height: 100% !important; }
+  /* Neat alignment and label styling */
+  ._4-column-grid.big-buttons .big-buttons-wrapper { 
+    display: flex !important; 
+    flex-direction: column !important; 
+    align-items: center !important; 
+    justify-content: flex-start !important; 
+    gap: 6px !important;
+    text-align: center !important;
+  }
+  ._4-column-grid.big-buttons .cta-text {
+    font-size: 0.95rem !important;
+    line-height: 1.2 !important;
+    margin: 4px 0 0 !important;
+    max-width: 96px !important; /* keep lines balanced */
+    white-space: normal !important;
+    word-break: keep-all !important;
+  }
+}
+
+/* Day Services: reduce mobile heading size for better fit */
+@media screen and (max-width: 480px) {
+  /* Grooming Packages: Add-on card typography */
+  .add-on-section { padding: 14px !important; }
+  .add-on-title { font-size: 1rem !important; line-height: 1.15 !important; letter-spacing: .2px !important; margin-bottom: 6px !important; }
+  .add-on-item { padding: 6px 0 !important; }
+  .add-on-item span { font-size: .88rem !important; line-height: 1.25 !important; overflow-wrap: anywhere !important; word-break: break-word !important; }
+  .pricing-category { padding: 12px 10px !important; }
+  .pricing-category .pricing-table th,
+  .pricing-category .pricing-table td { font-size: .85rem !important; }
+  .service-description p { font-size: .9rem !important; }
+
+  /* Grooming Rates: Spa benefits cards (Lavender, Chamomile, etc.) */
+  .spa-benefits { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .spa-benefit { padding: 12px !important; }
+  .spa-benefit { font-size: .95rem !important; line-height: 1.35 !important; }
+  .spa-benefit strong { font-size: 1.05rem !important; }
+
+  .daycare-info-text h2 {
+    font-size: 1.6rem !important; /* was too large on mobile */
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    margin: 6px 0 8px !important;
+  }
+}

@@ -1,0 +1,36 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text-main { 
+        font-family: 'Georgia', serif; 
+        font-size: 72px; 
+        font-weight: 300; 
+        letter-spacing: 18px;
+        fill: #000000;
+      }
+      .logo-text-sub { 
+        font-family: 'Georgia', serif; 
+        font-size: 24px; 
+        font-weight: 400; 
+        letter-spacing: 8px;
+        fill: #000000;
+      }
+      .logo-text-bottom { 
+        font-family: 'Georgia', serif; 
+        font-size: 42px; 
+        font-weight: 300; 
+        letter-spacing: 12px;
+        fill: #000000;
+      }
+    </style>
+  </defs>
+  
+  <!-- Main text: SOPRA -->
+  <text x="50%" y="80" text-anchor="middle" class="logo-text-main">SOPRA</text>
+  
+  <!-- Subtitle: EXCELLENCE DOG SALON -->
+  <text x="50%" y="115" text-anchor="middle" class="logo-text-sub">EXCELLENCE DOG SALON</text>
+  
+  <!-- Bottom text: CITTA -->
+  <text x="50%" y="165" text-anchor="middle" class="logo-text-bottom">CITTA</text>
+</svg>

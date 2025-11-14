@@ -1,0 +1,58 @@
+═══════════════════════════════════════════════════════════════
+            GROOMING PACKAGES PAGE - MOON PETS
+═══════════════════════════════════════════════════════════════
+
+✅ FILE BARU YANG DIBUAT:
+   grooming-packages.html
+
+📋 ISI HALAMAN:
+
+1. DOG GROOMING
+   - 4 ukuran: Toy/Small, Medium, Large, Extra Large
+   - 3 paket: Full, Basic, Express
+   - Add-on services (Bath & Fluff, Ear Cleaning, dll)
+   - Spa services dengan berbagai aroma
+
+2. CAT GROOMING
+   - Full Grooming (up to 6kg & up to 12kg)
+   - Basic Grooming
+   - Bath & Fluff
+   - Nail Clipping
+   - Extra fee untuk aggressive behavior
+
+3. RABBIT GROOMING
+   - 3 ukuran: Small, Medium, Large
+   - Add-on: Body fur trimming, water bath, dry bath, matt fur
+
+4. GUINEA PIG GROOMING
+   - Short Coat & Long Coat
+   - Add-on: Body fur trimming, water bath, dry bath, matt fur
+
+═══════════════════════════════════════════════════════════════
+
+🔗 LINK SUDAH DITAMBAHKAN:
+   - Tombol "Explore grooming packages" di homepage
+   - Sekarang mengarah ke: grooming-packages.html
+
+═══════════════════════════════════════════════════════════════
+
+📝 CARA EDIT HARGA:
+
+1. Buka file: grooming-packages.html
+2. Cari section yang ingin diedit (Dog/Cat/Rabbit/Guinea Pig)
+3. Edit harga di dalam <td> tags
+4. Save dan refresh browser
+
+Contoh:
+<td>$70 - $90</td>  ← Ubah angka ini
+
+═══════════════════════════════════════════════════════════════
+
+🎨 DESAIN:
+   - Responsive design
+   - Tabel pricing yang jelas
+   - Section terpisah untuk setiap jenis hewan
+   - Add-on services dengan harga
+   - CTA button untuk booking
+
+═══════════════════════════════════════════════════════════════
