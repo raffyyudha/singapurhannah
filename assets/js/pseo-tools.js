@@ -6,7 +6,7 @@
 const PSEO_CONFIG = {
     whatsappNumber: "6588556677", // Ganti dengan nomor asli
     baseLocation: "148 Yishun Street 11, Singapore 760148",
-    defaultMessage: "Hi, I'm interested in dog grooming services. (Recommended by Raffy Yudha)"
+    defaultMessage: "Hi, I'm interested in dog grooming services. I want to claim the promo from Raffy Yudha."
 };
 
 /**
@@ -78,7 +78,7 @@ function initWhatsAppBubble() {
 
     let message = PSEO_CONFIG.defaultMessage;
     if (locationName) {
-        message = `Hi, I'm interested in dog grooming near ${locationName}. (Recommended by Raffy Yudha)`;
+        message = `Hi, I'm interested in dog grooming near ${locationName}. I want to claim the promo from Raffy Yudha.`;
     }
 
     const encodedMessage = encodeURIComponent(message);
@@ -89,7 +89,7 @@ function initWhatsAppBubble() {
             <a href="${waUrl}" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
                 <div style="background: white; padding: 10px 15px; border-radius: 20px 20px 5px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: none; transition: all 0.3s;" id="wa-bubble-text">
                     <p style="margin: 0; color: #333; font-size: 14px; font-weight: 500;">Chat with us!</p>
-                    <span style="font-size: 10px; color: #888;">Recommend by Raffy Yudha</span>
+                    <span style="font-size: 10px; color: #888;">Claim Promo from Raffy Yudha</span>
                 </div>
                 <div style="background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4); position: relative;">
                     <svg width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
