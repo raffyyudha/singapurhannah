@@ -56,11 +56,6 @@ function initInstagramRotator(videoLinks, targetSelector = '#ig-video-container'
                 style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 400px; background: white; min-height: 550px;">
             </iframe>
         </div>
-        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
-            <a href="${selectedLink}" target="_blank" style="text-decoration: none; color: #8B6F47; font-weight: bold;">
-                View on Instagram &rarr;
-            </a>
-        </p>
     `;
 
     container.innerHTML = iframeHtml;
