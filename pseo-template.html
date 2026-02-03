@@ -227,6 +227,20 @@
         </div>
     </div>
 
+    <!-- Pricing Estimate Section -->
+    <div class="content-section" style="text-align: center; padding: 40px 20px;">
+        <h2 style="color: #7d5c3b;">Transparent Pricing for <span class="dynamic-location">Yishun</span> Residents</h2>
+        <p style="color: #666; margin-bottom: 30px;">Premium grooming at neighborhood prices.</p>
+
+        <div
+            style="display: inline-block; background: white; padding: 20px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 2px solid #F5E6D3;">
+            <div style="font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; color: #888;">Full Grooming
+                Starts From</div>
+            <div id="dynamic-price" style="font-size: 2.5em; font-weight: bold; color: #333; margin: 10px 0;">$45</div>
+            <div style="font-size: 0.8em; color: #999;">*Price varies by breed & size</div>
+        </div>
+    </div>
+
     <!-- Process Section -->
     <div class="content-section">
         <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">Our Gentle Grooming Process</h2>
@@ -320,63 +334,106 @@
     <script type="module">
         import { instagramVideos } from './assets/js/video-data.js';
 
+        // PSEO Variation Engine
+        // Generates consistent but unique variations based on URL/Location
+        class SimplePseoEngine {
+            constructor() {
+                this.path = window.location.pathname.replace(/^\/|\/$/g, '');
+                this.rawTitle = "";
+                this.locationName = "Yishun"; // Default
+                this.prettyTitle = "Pet Grooming Services";
+                this.seed = 0;
+            }
+
+            init() {
+                if (this.path && this.path !== 'pseo-template.html') {
+                    // Extract slugs
+                    this.rawTitle = this.path.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    this.prettyTitle = this.rawTitle;
+
+                    if (this.rawTitle.includes('Near')) {
+                        this.locationName = this.rawTitle.split('Near')[1].trim();
+                    }
+                }
+
+                // Generate Seed Code
+                this.seed = this._generateHash(this.locationName + this.prettyTitle);
+
+                this._updateDOM();
+                this._injectPrice();
+                this._initTools();
+                this._spinContent();
+            }
+
+            _generateHash(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = (hash << 5) - hash + char;
+                    hash = hash & hash;
+                }
+                return Math.abs(hash) / 2147483647; // 0 to 1 float
+            }
+
+            _updateDOM() {
+                // Title & Desc
+                document.title = `${this.prettyTitle} | Huggs Pawly`;
+                document.getElementById('page-title').textContent = this.prettyTitle;
+
+                // Dynamic Desc with Seed
+                const descs = [
+                    `Best rated ${this.prettyTitle.split(' Near')[0]} service serving ${this.locationName}.`,
+                    `Top choice for ${this.prettyTitle} in the ${this.locationName} neighborhood.`,
+                    `Professional and gentle ${this.prettyTitle} right here in ${this.locationName}.`,
+                    `Your trusted local ${this.prettyTitle} experts near ${this.locationName}.`
+                ];
+                const descIndex = Math.floor(this.seed * descs.length);
+                document.getElementById('page-desc').innerHTML = descs[descIndex] + ` <br><span class="spin-text" data-options="Book Now|Schedule Today|Contact Us">Book Now</span>`;
+
+                // Location Spans
+                document.querySelectorAll('.dynamic-location').forEach(el => {
+                    el.textContent = this.locationName;
+                });
+
+                // Hidden Location Marker for WA Tool
+                const locMarker = document.createElement('div');
+                locMarker.id = 'pseo-location-name';
+                locMarker.style.display = 'none';
+                locMarker.textContent = this.locationName;
+                document.body.appendChild(locMarker);
+            }
+
+            _injectPrice() {
+                // Base Price $35, Max Adder $20 -> Range $35 - $55
+                // Deterministic based on seed
+                const price = 35 + Math.floor(this.seed * 20);
+                const el = document.getElementById('dynamic-price');
+                if (el) el.textContent = `$${price}`;
+            }
+
+            _initTools() {
+                if (window.Pseotools) {
+                    if (window.Pseotools.initVideos) {
+                        window.Pseotools.initVideos(instagramVideos, '#video-wrapper');
+                    }
+                    if (window.Pseotools.initWA) {
+                        window.Pseotools.initWA();
+                    }
+                }
+            }
+
+            _spinContent() {
+                // Trigger global spinner if available
+                if (window.Pseotools && window.Pseotools.initContentSpinner) {
+                    // We can re-run it or let it run auto. 
+                    // But here we can inject more spin classes first if we want.
+                }
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. EXTRACT INFO FROM URL
-            // Slug format: /dog-grooming-near-blk-148-yishun
-            const path = window.location.pathname.replace(/^\/|\/$/g, ''); // Remove leading/trailing slashes
-
-            let prettyTitle = "Ped Grooming Services";
-            let locationName = "Yishun";
-
-            if (path && path !== 'pseo-template.html') {
-                // Convert "dog-grooming-near-blk-148-yishun" to "Dog Grooming Near Blk 148 Yishun"
-                const rawTitle = path.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-                prettyTitle = rawTitle;
-
-                // Try to extract location part (assumes format Start-Service-Near-Location...)
-                if (rawTitle.includes('Near')) {
-                    locationName = rawTitle.split('Near')[1].trim();
-                }
-            }
-
-            // 2. UPDATE DOM
-            document.title = `${prettyTitle} | Huggs Pawly`;
-            document.getElementById('page-title').textContent = prettyTitle;
-            document.getElementById('page-desc').textContent = `Best rated ${prettyTitle.split(' Near')[0]} service serving ${locationName}.`;
-
-            document.querySelectorAll('.dynamic-location').forEach(el => {
-                el.textContent = locationName;
-            });
-
-            // Set Location for WA Bubble
-            const locMarker = document.createElement('div');
-            locMarker.id = 'pseo-location-name';
-            locMarker.style.display = 'none';
-            locMarker.textContent = locationName;
-            document.body.appendChild(locMarker);
-
-            // 3. INIT TOOLS
-            if (window.Pseotools) {
-                // Init Video
-                if (window.Pseotools.initVideos) {
-                    window.Pseotools.initVideos(instagramVideos, '#video-wrapper');
-                }
-                // Init WA Bubble (Manual trigger for PSEO page)
-                if (window.Pseotools.initWA) {
-                    window.Pseotools.initWA();
-                }
-            }
-
-            // 4. GENERATE NEARBY LINKS (Random 20 links from same dataset)
-            // In real app, we might want to fetch nearest neighbors, but random is okay for static.
-            // Since we can't import the huge JSON here easily without network request, 
-            // we will simulate it or fetch if available.
-
-            // For now, let's just generate some "Other Streets" links based on logic if file not present
-            // TAPI, kita bisa fetch 'assets/js/pseo-generated-locations.js' kalau mau.
-            // Simplified: Just randomize generic links for demo.
-
-            // Note: In a real build, we'd inject the nearby links during build time or fetch a small json.
+            const engine = new SimplePseoEngine();
+            engine.init();
         });
     </script>
 </body>
