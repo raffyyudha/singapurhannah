@@ -30,16 +30,21 @@ function initInstagramRotator(videoLinks, targetSelector = '#ig-video-container'
     if (!embedUrl.endsWith('/')) embedUrl += '/';
     embedUrl += 'embed';
 
+    // ADDED: /embed/captioned helps with sizing issues and adds context
+    // embedUrl += '/captioned'; 
+
     const iframeHtml = `
-        <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <div style="display: flex; justify-content: center; margin: 20px 0; width: 100%;">
             <iframe 
                 src="${embedUrl}" 
-                width="400" 
-                height="480" 
+                width="100%" 
+                height="600" 
                 frameborder="0" 
                 scrolling="no" 
+                loading="lazy"
                 allowtransparency="true"
-                style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 100%;">
+                allow="encrypted-media"
+                style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 400px; background: white; min-height: 550px;">
             </iframe>
         </div>
         <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
