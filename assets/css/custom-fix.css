@@ -1,0 +1,153 @@
+/* Fix untuk gambar header agar tersebar tanpa perlu JavaScript */
+
+/* Animasi untuk gambar tersebar dari tengah */
+@keyframes spreadOut {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk heading muncul */
+@keyframes fadeInUp {
+    0% {
+        transform: translate3d(0, 2em, 0) rotateZ(-4deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotateZ(0deg);
+        opacity: 1;
+    }
+}
+
+/* Paksa gambar tersebar bahkan tanpa JavaScript */
+@media (min-width:992px) {
+    /* Gambar tengah - tetap di tengah */
+    [data-w-id="c9037e5e-4f1a-7eef-d8b1-a339fe0c2294"] {
+        transform: translate3d(0VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0) !important;
+        transform-style: preserve-3d;
+        animation: spreadOut 1s ease-out 0.2s both;
+    }
+    
+    /* Gambar kiri atas */
+    [data-w-id="0e008f32-1617-f27a-7abd-760eefcc8735"] {
+        transform: translate3d(21VW, 3VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+        transform-style: preserve-3d;
+        animation: spreadOut 1s ease-out 0.4s both;
+    }
+    
+    /* Gambar kanan atas */
+    [data-w-id="e0566be4-826c-378c-0d53-f02832fa701a"] {
+        transform: translate3d(-21VW, 3VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+        transform-style: preserve-3d;
+        animation: spreadOut 1s ease-out 0.6s both;
+    }
+    
+    /* Gambar kanan bawah */
+    [data-w-id="70a28926-4468-4379-149d-cae994cfa78d"] {
+        transform: translate3d(-38VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+        transform-style: preserve-3d;
+        animation: spreadOut 1s ease-out 0.8s both;
+    }
+    
+    /* Gambar kiri bawah */
+    [data-w-id="5b23718b-6f2f-8331-f6b1-a4794a45c9f0"] {
+        transform: translate3d(38VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+        transform-style: preserve-3d;
+        animation: spreadOut 1s ease-out 1s both;
+    }
+    
+    /* Heading dengan animasi - PAKSA TAMPIL */
+    [data-w-id="df8ba497-8e89-eee6-5eb6-a66803c3113f"] {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        animation: fadeInUp 0.8s ease-out 0s both;
+    }
+    
+    /* Paksa semua heading di dalam heading-row-1 tampil */
+    .heading-row-1 {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .heading-row-1 h1,
+    .heading-row-1 .headline {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width:991px) and (min-width:768px) {
+    [data-w-id="c9037e5e-4f1a-7eef-d8b1-a339fe0c2294"] {
+        transform: translate3d(0VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0) !important;
+    }
+    
+    [data-w-id="0e008f32-1617-f27a-7abd-760eefcc8735"] {
+        transform: translate3d(21VW, 3VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="e0566be4-826c-378c-0d53-f02832fa701a"] {
+        transform: translate3d(-21VW, 3VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="70a28926-4468-4379-149d-cae994cfa78d"] {
+        transform: translate3d(-38VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="5b23718b-6f2f-8331-f6b1-a4794a45c9f0"] {
+        transform: translate3d(38VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="df8ba497-8e89-eee6-5eb6-a66803c3113f"] {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    .heading-row-1,
+    .heading-row-1 h1,
+    .heading-row-1 .headline {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width:767px) {
+    [data-w-id="c9037e5e-4f1a-7eef-d8b1-a339fe0c2294"] {
+        transform: translate3d(0VW, 0VW, 0VW) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0) !important;
+    }
+    
+    [data-w-id="0e008f32-1617-f27a-7abd-760eefcc8735"] {
+        transform: translate3d(32VW, -22VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="e0566be4-826c-378c-0d53-f02832fa701a"] {
+        transform: translate3d(-37VW, 22VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="70a28926-4468-4379-149d-cae994cfa78d"] {
+        transform: translate3d(-29VW, -18VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="5b23718b-6f2f-8331-f6b1-a4794a45c9f0"] {
+        transform: translate3d(37VW, 22VW, 0VW) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(0DEG) skew(0, 0) !important;
+    }
+    
+    [data-w-id="df8ba497-8e89-eee6-5eb6-a66803c3113f"] {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+    
+    .heading-row-1,
+    .heading-row-1 h1,
+    .heading-row-1 .headline {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}

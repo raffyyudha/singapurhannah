@@ -1,0 +1,78 @@
+═══════════════════════════════════════════════════════════════
+              DAY SERVICES PAGE - MOON PETS
+═══════════════════════════════════════════════════════════════
+
+✅ FILE BARU YANG DIBUAT:
+   day-services.html
+
+📋 ISI HALAMAN:
+
+DAYCARE SERVICE PRICING:
+┌─────────────┬──────────────┬──────────────┐
+│  FUR KID    │ HALF DAY     │ FULL DAY     │
+│             │ (6 Hours)    │ (12 Hours)   │
+├─────────────┼──────────────┼──────────────┤
+│ SMALL       │    $25       │    $40       │
+│ MEDIUM      │    $30       │    $45       │
+│ BUNNY       │    $10       │    $15       │
+│ GUINEA PIG  │    $10       │    $15       │
+└─────────────┴──────────────┴──────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+🎯 FITUR HALAMAN:
+
+1. Hero Section dengan background gradient
+2. Tabel pricing yang rapi dan responsive
+3. 6 Feature Cards:
+   - Active Playtime 🏃
+   - Safe Environment 🛡️
+   - Socialization 🤝
+   - Meals & Snacks 🍖
+   - Photo Updates 📸
+   - Rest Time 💤
+
+4. Testimonial box dengan quote lucu
+5. "What to Bring" checklist
+6. CTA button untuk booking
+
+═══════════════════════════════════════════════════════════════
+
+🔗 LINK SUDAH DIUPDATE:
+
+Homepage → "Explore Day Services" button
+Sekarang mengarah ke: day-services.html
+
+═══════════════════════════════════════════════════════════════
+
+📝 CARA EDIT HARGA:
+
+1. Buka file: day-services.html
+2. Cari section <tbody> di dalam pricing-table
+3. Edit harga di dalam <span class="price">
+4. Save dan refresh browser
+
+Contoh:
+<span class="price">$25</span>  ← Ubah angka ini
+
+═══════════════════════════════════════════════════════════════
+
+🎨 DESAIN:
+
+✓ Responsive design (mobile, tablet, desktop)
+✓ Gradient hero section
+✓ Clean pricing table dengan border
+✓ Feature cards dengan hover effect
+✓ Testimonial box
+✓ Checklist section
+✓ Professional layout
+
+═══════════════════════════════════════════════════════════════
+
+📱 RESPONSIVE:
+
+- Desktop: Full layout dengan 3 kolom feature cards
+- Tablet (768px): 2 kolom, font size medium
+- Mobile (480px): 1 kolom, font size small
+
+═══════════════════════════════════════════════════════════════

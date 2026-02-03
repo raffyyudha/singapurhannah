@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════
+              TROUBLESHOOTING - MOONPETS WEBSITE
+═══════════════════════════════════════════════════════════════
+
+🔧 MASALAH: Gambar tidak tersebar / hanya 1 gambar muncul
+
+SOLUSI:
+
+1. HARD REFRESH BROWSER
+   - Windows: Ctrl + Shift + R atau Ctrl + F5
+   - Mac: Cmd + Shift + R
+   
+   Ini akan memaksa browser reload semua file JavaScript
+
+2. CLEAR CACHE BROWSER
+   - Chrome: Settings > Privacy > Clear browsing data
+   - Firefox: Settings > Privacy > Clear Data
+   - Edge: Settings > Privacy > Clear browsing data
+   
+   Centang "Cached images and files" lalu Clear
+
+3. BUKA DI BROWSER LAIN
+   - Coba buka di Chrome, Firefox, atau Edge
+   - Kadang browser lama tidak support JavaScript modern
+
+4. GUNAKAN LOCAL SERVER
+   Buka terminal di folder bark-shop-clean, lalu:
+   
+   # Jika punya Python 3:
+   python -m http.server 8000
+   
+   # Lalu buka: http://localhost:8000
+   
+   Atau gunakan Live Server extension di VS Code
+
+═══════════════════════════════════════════════════════════════
+
+✅ YANG SUDAH DIPERBAIKI:
+
+1. Path JavaScript sudah benar (assets/js/)
+2. Semua file JavaScript ada di tempatnya
+3. Gambar-gambar sudah tersedia
+4. HTML sudah benar
+
+═══════════════════════════════════════════════════════════════
+
+📝 CATATAN:
+
+- Animasi gambar tersebar diatur oleh JavaScript Webflow
+- JavaScript memerlukan jQuery yang diload dari CDN
+- Pastikan koneksi internet aktif untuk load jQuery
+- Jika offline, beberapa animasi mungkin tidak jalan
+
+═══════════════════════════════════════════════════════════════
+
+🆘 JIKA MASIH BERMASALAH:
+
+Buka Console di browser (F12 > Console tab) dan lihat apakah
+ada error. Screenshot error tersebut untuk troubleshooting
+lebih lanjut.
+
+═══════════════════════════════════════════════════════════════
