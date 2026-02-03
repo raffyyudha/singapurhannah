@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Grooming Services | Huggs Pawly</title>
+
+    <!-- Meta SEO Dynamic -->
+    <meta name="description"
+        content="Professional Dog Grooming Services. Trusted by pet owners in your area. Book your appointment today!">
+
+    <!-- Load Styles same as Index -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom-fix.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.webp?v=2" />
+
+    <style>
+        /* Simple PSEO Page Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            background: #000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .hero {
+            background: url('assets/images/herobener.webp') center/cover;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .btn-cta {
+            background: #F5E6D3;
+            color: #000;
+            padding: 15px 30px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+        }
+
+        .content-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media(max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-container iframe {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .locations-list {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .locations-list h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            font-size: 0.9em;
+        }
+
+        .tags a {
+            color: #555;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .tags a:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo"><img src="assets/images/logo.webp" alt="Huggs Pawly"></a>
+            <a href="https://wa.me/6596109951" class="btn-cta"
+                style="padding: 10px 20px; font-size: 14px; margin: 0;">Book Now</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="page-title">Premium Pet Grooming Services</h1>
+            <p id="page-desc">Professional, gentle, and stress-free grooming near you.</p>
+            <a href="https://wa.me/6596109951" class="btn-cta">WhatsApp Us</a>
+        </div>
+    </section>
+
+    <div class="content-section">
+        <div class="content-grid">
+            <div id="video-wrapper">
+                <!-- Video will be injected here -->
+                <p style="text-align:center">Loading Video...</p>
+            </div>
+            <div>
+                <h2 style="color: #7d5c3b; margin-bottom: 15px;">Why Choose Huggs Pawly?</h2>
+                <p>At <strong>Huggs Pawly</strong>, we understand that finding the right groomer is important. We
+                    provide a calm, home-based environment perfect for anxious pets.</p>
+                <ul style="margin: 20px 0; padding-left: 20px; line-height: 1.8;">
+                    <li>✓ <strong>1-on-1 Attention:</strong> No cages, no rushing.</li>
+                    <li>✓ <strong>Stress-Free:</strong> Gentle handling techniques.</li>
+                    <li>✓ <strong>Convenient:</strong> Located near <span class="dynamic-location">Yishun</span>.</li>
+                    <li>✓ <strong>Experience:</strong> Professional certified groomers.</li>
+                </ul>
+                <p>We serve clients from all over the North, especially <span class="dynamic-location">Yishun</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PSEO Footer Links (Internal Linking Strategy) -->
+    <div class="content-section locations-list">
+        <h3>We also serve these nearby locations:</h3>
+        <div class="tags" id="nearby-links">
+            <!-- Links injected via JS -->
+        </div>
+    </div>
+
+    <!-- PSEO TOOLS & LOGIC -->
+    <script src="assets/js/pseo-tools.js"></script>
+    <script type="module">
+        import { instagramVideos } from './assets/js/video-data.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. EXTRACT INFO FROM URL
+            // Slug format: /dog-grooming-near-blk-148-yishun
+            const path = window.location.pathname.replace(/^\/|\/$/g, ''); // Remove leading/trailing slashes
+
+            let prettyTitle = "Ped Grooming Services";
+            let locationName = "Yishun";
+
+            if (path && path !== 'pseo-template.html') {
+                // Convert "dog-grooming-near-blk-148-yishun" to "Dog Grooming Near Blk 148 Yishun"
+                const rawTitle = path.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                prettyTitle = rawTitle;
+
+                // Try to extract location part (assumes format Start-Service-Near-Location...)
+                if (rawTitle.includes('Near')) {
+                    locationName = rawTitle.split('Near')[1].trim();
+                }
+            }
+
+            // 2. UPDATE DOM
+            document.title = `${prettyTitle} | Huggs Pawly`;
+            document.getElementById('page-title').textContent = prettyTitle;
+            document.getElementById('page-desc').textContent = `Best rated ${prettyTitle.split(' Near')[0]} service serving ${locationName}.`;
+
+            document.querySelectorAll('.dynamic-location').forEach(el => {
+                el.textContent = locationName;
+            });
+
+            // Set Location for WA Bubble
+            const locMarker = document.createElement('div');
+            locMarker.id = 'pseo-location-name';
+            locMarker.style.display = 'none';
+            locMarker.textContent = locationName;
+            document.body.appendChild(locMarker);
+
+            // 3. INIT TOOLS
+            if (window.Pseotools) {
+                // Init Video
+                if (window.Pseotools.initVideos) {
+                    window.Pseotools.initVideos(instagramVideos, '#video-wrapper');
+                }
+                // Init WA Bubble (Manual trigger for PSEO page)
+                if (window.Pseotools.initWA) {
+                    window.Pseotools.initWA();
+                }
+            }
+
+            // 4. GENERATE NEARBY LINKS (Random 20 links from same dataset)
+            // In real app, we might want to fetch nearest neighbors, but random is okay for static.
+            // Since we can't import the huge JSON here easily without network request, 
+            // we will simulate it or fetch if available.
+
+            // For now, let's just generate some "Other Streets" links based on logic if file not present
+            // TAPI, kita bisa fetch 'assets/js/pseo-generated-locations.js' kalau mau.
+            // Simplified: Just randomize generic links for demo.
+
+            // Note: In a real build, we'd inject the nearby links during build time or fetch a small json.
+        });
+    </script>
+</body>
+
+</html>
