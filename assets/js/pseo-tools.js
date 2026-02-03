@@ -24,26 +24,35 @@ function initInstagramRotator(videoLinks, targetSelector = '#ig-video-container'
     const randomIndex = Math.floor(Math.random() * videoLinks.length);
     const selectedLink = videoLinks[randomIndex];
 
-    // Format link untuk embed (tambah /embed di akhir jika belum ada)
-    // Pastikan link bersih dari query params tracking
-    let embedUrl = selectedLink.split('?')[0];
-    if (!embedUrl.endsWith('/')) embedUrl += '/';
-    embedUrl += 'embed';
+    // 4. ROBUST EXTRACT ID & BUILD EMBED URL
+    // Regex matches /reel/CODE or /p/CODE regardless of username
+    // Example: https://www.instagram.com/huggspawly/reel/DRE2yO9kRN3/ -> DRE2yO9kRN3
+    const reelIdMatch = selectedLink.match(/\/(?:reel|p)\/([a-zA-Z0-9_-]+)/);
 
-    // ADDED: /embed/captioned helps with sizing issues and adds context
-    // embedUrl += '/captioned'; 
+    // Fallback logic if regex fails (though unrelated links shouldn't be here)
+    let finalEmbedUrl = "";
+    if (reelIdMatch && reelIdMatch[1]) {
+        // Standard Cleaner Embed URL
+        finalEmbedUrl = `https://www.instagram.com/reel/${reelIdMatch[1]}/embed/`;
+    } else {
+        // Fallback: simple append if structure is weird but valid
+        finalEmbedUrl = selectedLink.split('?')[0];
+        if (!finalEmbedUrl.endsWith('/')) finalEmbedUrl += '/';
+        finalEmbedUrl += 'embed';
+    }
 
     const iframeHtml = `
         <div style="display: flex; justify-content: center; margin: 20px 0; width: 100%;">
             <iframe 
-                src="${embedUrl}" 
+                src="${finalEmbedUrl}" 
                 width="100%" 
                 height="600" 
                 frameborder="0" 
                 scrolling="no" 
-                loading="lazy"
                 allowtransparency="true"
                 allow="encrypted-media"
+                title="Instagram Video"
+                loading="lazy" 
                 style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 400px; background: white; min-height: 550px;">
             </iframe>
         </div>
