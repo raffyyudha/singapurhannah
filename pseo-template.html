@@ -176,14 +176,18 @@
         </div>
     </section>
 
-    <div class="content-section">
+    <!-- Intro Section (Video + Why Us) -->
+    <div id="section-intro" class="content-section">
         <div class="content-grid">
             <div id="video-wrapper">
-                <!-- Video will be injected here -->
                 <p style="text-align:center">Loading Video...</p>
             </div>
             <div>
-                <h2 style="color: #7d5c3b; margin-bottom: 15px;">Why Choose Huggs Pawly?</h2>
+                <h2 style="color: #7d5c3b; margin-bottom: 15px;">
+                    <span class="spin-text"
+                        data-options="Why Choose Huggs Pawly?|The Best Choice for Your Pet|Why We Are Rated #1|Superior Grooming Care">Why
+                        Choose Huggs Pawly?</span>
+                </h2>
                 <p>At <strong>Huggs Pawly</strong>, we understand that finding the right groomer is important. We
                     provide a calm, home-based environment perfect for anxious pets.</p>
                 <ul style="margin: 20px 0; padding-left: 20px; line-height: 1.8;">
@@ -199,8 +203,11 @@
     </div>
 
     <!-- Benefits Section -->
-    <div class="content-section" style="background: #f9f9f9; padding: 40px; border-radius: 20px;">
-        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">Why Your Pet Needs Professional Grooming in
+    <div id="section-benefits" class="content-section" style="background: #f9f9f9; padding: 40px; border-radius: 20px;">
+        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">
+            <span class="spin-text"
+                data-options="Why Your Pet Needs Professional Grooming|Benefits of Regular Grooming|Why Choose Professional Care|Health Benefits for Your Pet">Why
+                Your Pet Needs Professional Grooming</span> in
             <span class="dynamic-location">Yishun</span>
         </h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
@@ -228,8 +235,12 @@
     </div>
 
     <!-- Pricing Estimate Section -->
-    <div class="content-section" style="text-align: center; padding: 40px 20px;">
-        <h2 style="color: #7d5c3b;">Transparent Pricing for <span class="dynamic-location">Yishun</span> Residents</h2>
+    <div id="section-pricing" class="content-section" style="text-align: center; padding: 40px 20px;">
+        <h2 style="color: #7d5c3b;">
+            <span class="spin-text"
+                data-options="Transparent Pricing|Affordable Rates|Great Value Grooming|Fair & Clear Pricing">Transparent
+                Pricing</span> for <span class="dynamic-location">Yishun</span> Residents
+        </h2>
         <p style="color: #666; margin-bottom: 30px;">Premium grooming at neighborhood prices.</p>
 
         <div
@@ -242,8 +253,12 @@
     </div>
 
     <!-- Process Section -->
-    <div class="content-section">
-        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">Our Gentle Grooming Process</h2>
+    <div id="section-process" class="content-section">
+        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">
+            <span class="spin-text"
+                data-options="Our Gentle Grooming Process|How We Care For Your Pet|The Grooming Experience|Our 4-Step Process">Our
+                Gentle Grooming Process</span>
+        </h2>
         <div style="display: flex; flex-direction: column; gap: 15px;">
             <div style="display: flex; gap: 15px; align-items: start;">
                 <div
@@ -289,8 +304,12 @@
     </div>
 
     <!-- FAQ Section -->
-    <div class="content-section" style="border-top: 1px solid #eee; padding-top: 40px;">
-        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">Frequently Asked Questions</h2>
+    <div id="section-faq" class="content-section" style="border-top: 1px solid #eee; padding-top: 40px;">
+        <h2 style="text-align: center; color: #7d5c3b; margin-bottom: 30px;">
+            <span class="spin-text"
+                data-options="Frequently Asked Questions|FAQ|Common Questions|What You Need To Know">Frequently Asked
+                Questions</span>
+        </h2>
         <div style="max-width: 800px; margin: 0 auto;">
             <div style="margin-bottom: 20px;">
                 <h4 style="margin-bottom: 5px;">📍 Do you cover <span class="dynamic-location">Yishun</span>?</h4>
@@ -312,7 +331,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="content-section"
+    <div id="section-cta" class="content-section"
         style="text-align: center; background: #7d5c3b; color: white; padding: 40px; border-radius: 20px; margin-bottom: 50px;">
         <h2 style="color: white; margin-bottom: 15px;">Ready to Pamper Your Furkid?</h2>
         <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px;">Book the best grooming experience near <span
@@ -340,29 +359,26 @@
             constructor() {
                 this.path = window.location.pathname.replace(/^\/|\/$/g, '');
                 this.rawTitle = "";
-                this.locationName = "Yishun"; // Default
+                this.locationName = "Yishun";
                 this.prettyTitle = "Pet Grooming Services";
                 this.seed = 0;
             }
 
             init() {
                 if (this.path && this.path !== 'pseo-template.html') {
-                    // Extract slugs
                     this.rawTitle = this.path.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
                     this.prettyTitle = this.rawTitle;
-
                     if (this.rawTitle.includes('Near')) {
                         this.locationName = this.rawTitle.split('Near')[1].trim();
                     }
                 }
-
-                // Generate Seed Code
                 this.seed = this._generateHash(this.locationName + this.prettyTitle);
 
                 this._updateDOM();
                 this._injectPrice();
-                this._initTools();
                 this._spinContent();
+                this._shuffleSections();
+                this._initTools();
             }
 
             _generateHash(str) {
@@ -372,15 +388,13 @@
                     hash = (hash << 5) - hash + char;
                     hash = hash & hash;
                 }
-                return Math.abs(hash) / 2147483647; // 0 to 1 float
+                return Math.abs(hash) / 2147483647;
             }
 
             _updateDOM() {
-                // Title & Desc
                 document.title = `${this.prettyTitle} | Huggs Pawly`;
                 document.getElementById('page-title').textContent = this.prettyTitle;
 
-                // Dynamic Desc with Seed
                 const descs = [
                     `Best rated ${this.prettyTitle.split(' Near')[0]} service serving ${this.locationName}.`,
                     `Top choice for ${this.prettyTitle} in the ${this.locationName} neighborhood.`,
@@ -390,12 +404,10 @@
                 const descIndex = Math.floor(this.seed * descs.length);
                 document.getElementById('page-desc').innerHTML = descs[descIndex] + ` <br><span class="spin-text" data-options="Book Now|Schedule Today|Contact Us">Book Now</span>`;
 
-                // Location Spans
                 document.querySelectorAll('.dynamic-location').forEach(el => {
                     el.textContent = this.locationName;
                 });
 
-                // Hidden Location Marker for WA Tool
                 const locMarker = document.createElement('div');
                 locMarker.id = 'pseo-location-name';
                 locMarker.style.display = 'none';
@@ -404,11 +416,43 @@
             }
 
             _injectPrice() {
-                // Base Price $35, Max Adder $20 -> Range $35 - $55
-                // Deterministic based on seed
                 const price = 35 + Math.floor(this.seed * 20);
                 const el = document.getElementById('dynamic-price');
                 if (el) el.textContent = `$${price}`;
+            }
+
+            _spinContent() {
+                document.querySelectorAll('.spin-text').forEach((el, i) => {
+                    const options = el.getAttribute('data-options').split('|');
+                    const variantSeed = (this.seed * (i + 1) * 123.45) % 1;
+                    const index = Math.floor(variantSeed * options.length);
+                    el.textContent = options[index];
+                });
+            }
+
+            _shuffleSections() {
+                const sections = ['section-benefits', 'section-pricing', 'section-process', 'section-faq'];
+                let shuffled = [...sections];
+                let m = shuffled.length, t, i;
+                let localSeed = this.seed * 999;
+
+                while (m) {
+                    i = Math.floor((localSeed % 1) * m--);
+                    localSeed = (localSeed * 1.5 + 0.123) % 1000;
+                    t = shuffled[m];
+                    shuffled[m] = shuffled[i];
+                    shuffled[i] = t;
+                }
+
+                const cta = document.getElementById('section-cta');
+                if (!cta) return;
+
+                shuffled.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        cta.parentNode.insertBefore(el, cta);
+                    }
+                });
             }
 
             _initTools() {
@@ -422,13 +466,6 @@
                 }
             }
 
-            _spinContent() {
-                // Trigger global spinner if available
-                if (window.Pseotools && window.Pseotools.initContentSpinner) {
-                    // We can re-run it or let it run auto. 
-                    // But here we can inject more spin classes first if we want.
-                }
-            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {

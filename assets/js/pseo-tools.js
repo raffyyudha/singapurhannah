@@ -27,19 +27,10 @@ function initInstagramRotator(videoLinks, targetSelector = '#ig-video-container'
     // 4. ROBUST EXTRACT ID & BUILD EMBED URL
     // Regex matches /reel/CODE or /p/CODE regardless of username
     // Example: https://www.instagram.com/huggspawly/reel/DRE2yO9kRN3/ -> DRE2yO9kRN3
-    const reelIdMatch = selectedLink.match(/\/(?:reel|p)\/([a-zA-Z0-9_-]+)/);
-
-    // Fallback logic if regex fails (though unrelated links shouldn't be here)
-    let finalEmbedUrl = "";
-    if (reelIdMatch && reelIdMatch[1]) {
-        // Standard Cleaner Embed URL
-        finalEmbedUrl = `https://www.instagram.com/reel/${reelIdMatch[1]}/embed/`;
-    } else {
-        // Fallback: simple append if structure is weird but valid
-        finalEmbedUrl = selectedLink.split('?')[0];
-        if (!finalEmbedUrl.endsWith('/')) finalEmbedUrl += '/';
-        finalEmbedUrl += 'embed';
-    }
+    // 4. SAFER EMBED URL CONSTRUCTION
+    let finalEmbedUrl = selectedLink.split('?')[0];
+    if (!finalEmbedUrl.endsWith('/')) finalEmbedUrl += '/';
+    finalEmbedUrl += 'embed/captioned/';
 
     const iframeHtml = `
         <div style="display: flex; justify-content: center; margin: 20px 0; width: 100%;">
