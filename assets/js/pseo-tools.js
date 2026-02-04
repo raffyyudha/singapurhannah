@@ -27,10 +27,21 @@ function initInstagramRotator(videoLinks, targetSelector = '#ig-video-container'
     // 4. ROBUST EXTRACT ID & BUILD EMBED URL
     // Regex matches /reel/CODE or /p/CODE regardless of username
     // Example: https://www.instagram.com/huggspawly/reel/DRE2yO9kRN3/ -> DRE2yO9kRN3
-    // 4. SAFER EMBED URL CONSTRUCTION
-    let finalEmbedUrl = selectedLink.split('?')[0];
-    if (!finalEmbedUrl.endsWith('/')) finalEmbedUrl += '/';
-    finalEmbedUrl += 'embed/captioned/';
+    // 4. ROBUST EXTRACT ID (Fixes 'Refused to connect' by removing username)
+    // We must extract ONLY the ID. /huggspawly/reel/ID/embed is often blocked.
+    // /reel/ID/embed is allowed.
+    const reelIdMatch = selectedLink.match(/\/(?:reel|p)\/([a-zA-Z0-9_-]+)/);
+
+    let finalEmbedUrl = "";
+    if (reelIdMatch && reelIdMatch[1]) {
+        // Correct Standard Embed URL: https://www.instagram.com/reel/ID/embed/
+        finalEmbedUrl = `https://www.instagram.com/reel/${reelIdMatch[1]}/embed/`;
+    } else {
+        // Emergency Fallback (though unlikely to work if above fails)
+        finalEmbedUrl = selectedLink.split('?')[0];
+        if (!finalEmbedUrl.endsWith('/')) finalEmbedUrl += '/';
+        finalEmbedUrl += 'embed';
+    }
 
     const iframeHtml = `
         <div style="display: flex; justify-content: center; margin: 20px 0; width: 100%;">
