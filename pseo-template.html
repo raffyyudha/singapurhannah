@@ -145,6 +145,49 @@
             background: #f5f5f5;
             color: #000;
         }
+
+        /* Tool Cards Styling */
+        .tool-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+            flex: 1 1 calc(25% - 20px);
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card strong {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color: #7d5c3b;
+        }
+
+        .tool-card span {
+            font-size: 0.85em;
+            color: #666;
+            display: block;
+            line-height: 1.3;
+        }
+
+        @media(max-width: 768px) {
+            .tool-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
     </style>
 </head>
 
@@ -342,25 +385,51 @@
 
     <!-- Partner Tools Section (PSEO Only) -->
     <div class="content-section"
-        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 50px 30px; border-radius: 20px; margin-bottom: 40px;">
-        <h2 style="text-align: center; color: white; margin-bottom: 15px; font-size: 1.8em;">🛠️ Useful Free Tools</h2>
-        <p style="text-align: center; color: rgba(255,255,255,0.85); margin-bottom: 35px; font-size: 1.1em;">Recommended
-            tools for small business owners</p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-            <a href="https://draftkit.online" target="_blank" rel="noopener noreferrer"
-                style="display: block; background: white; padding: 30px 40px; border-radius: 15px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s; min-width: 280px; text-align: center;">
-                <div style="font-size: 3em; margin-bottom: 10px;">📄</div>
-                <strong style="color: #4A90D9; font-size: 1.5em; display: block; margin-bottom: 8px;">DraftKit</strong>
-                <span style="font-size: 1em; color: #666; display: block;">Free Invoice Generator</span>
-                <span style="font-size: 0.9em; color: #999; display: block; margin-top: 5px;">No Signup Required!</span>
+        style="background: linear-gradient(135deg, #7d5c3b 0%, #4a341e 100%); padding: 50px 30px; border-radius: 20px; margin-bottom: 40px;">
+        <h2 style="text-align: center; color: white; margin-bottom: 15px; font-size: 1.8em;">🛠️ Best Free Business
+            Tools</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.85); margin-bottom: 35px; font-size: 1.1em;">Useful
+            tools for small businesses and freelancers</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="https://bepcalc.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">📊</div>
+                <strong>BepCalc</strong>
+                <span>Break-even calculator to see if your project is viable.</span>
             </a>
-            <a href="https://freereceipt.online" target="_blank" rel="noopener noreferrer"
-                style="display: block; background: white; padding: 30px 40px; border-radius: 15px; text-decoration: none; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s; min-width: 280px; text-align: center;">
-                <div style="font-size: 3em; margin-bottom: 10px;">🧾</div>
-                <strong
-                    style="color: #2ECC71; font-size: 1.5em; display: block; margin-bottom: 8px;">FreeReceipt.Online</strong>
-                <span style="font-size: 1em; color: #666; display: block;">Create Receipts Instantly</span>
-                <span style="font-size: 0.9em; color: #999; display: block; margin-top: 5px;">100% Free Forever</span>
+            <a href="https://draftkit.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">📄</div>
+                <strong>DraftKit</strong>
+                <span>Lightweight invoice generator for professional invoices instantly.</span>
+            </a>
+            <a href="https://freereceipt.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">🧾</div>
+                <strong>FreeReceipt</strong>
+                <span>Fast and free receipt generator for small businesses.</span>
+            </a>
+            <a href="https://mortgagescalc.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">🏠</div>
+                <strong>MortgagesCalc</strong>
+                <span>Estimate monthly payments and mortgage interest costs.</span>
+            </a>
+            <a href="https://taxcalpro.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">💰</div>
+                <strong>TaxCalPro</strong>
+                <span>Salary tax calculator to estimate your net take-home pay.</span>
+            </a>
+            <a href="https://jamierealestates.com" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">🏢</div>
+                <strong>JamieRealEstates</strong>
+                <span>Specialized invoice and quote generator for real estate pros.</span>
+            </a>
+            <a href="https://fixmyloan.online" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">💸</div>
+                <strong>FixMyLoan</strong>
+                <span>Loan payoff calculator to see how much interest you can save.</span>
+            </a>
+            <a href="https://tec-tiles.com" target="_blank" rel="noopener noreferrer" class="tool-card">
+                <div style="font-size: 2.5em;">🧱</div>
+                <strong>Tec-Tiles</strong>
+                <span>Accurately estimate tile quantities and material costs.</span>
             </a>
         </div>
     </div>
