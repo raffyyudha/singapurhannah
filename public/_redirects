@@ -1,0 +1,10 @@
+
+# PSEO Wildcard Routing
+# Tangkap semua URL yang tidak ada file fisiknya, arahkan ke template.html
+/dog-grooming-*  /pseo-template.html  200
+/cat-grooming-*  /pseo-template.html  200
+/pet-*           /pseo-template.html  200
+/rabbit-*        /pseo-template.html  200
+
+# Fix common underscores typos
+/grooming_packages.html  /grooming-packages.html  301

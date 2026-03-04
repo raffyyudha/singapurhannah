@@ -118,6 +118,11 @@ async function run() {
 
     console.log(`✨ Total Pages Generated: ${urls.length}`);
 
+    // Ensure public directory exists
+    if (!fs.existsSync('public')) {
+        fs.mkdirSync('public');
+    }
+
     // 1. WRITE SITEMAP.XML
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -129,27 +134,15 @@ ${urls.map(u => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-    fs.writeFileSync(OUTPUT_SITEMAP, sitemapContent);
-    console.log(`✅ Sitemap written to: ${OUTPUT_SITEMAP}`);
+    fs.writeFileSync('public/' + OUTPUT_SITEMAP, sitemapContent);
+    console.log(`✅ Sitemap written to: public/${OUTPUT_SITEMAP}`);
 
     // 2. WRITE FRONTEND DATA (JSON)
-    // Kita simpan ini sebagai JS object besar agar halaman statis bisa 'lookup' judul.
-    // Untuk 50k - 100k item, JSON file mungkin 5-10MB. 
-    // Optimization: Kita tidak simpan full object, tapi logic decoding di frontend.
-    // TAPI untuk sekarang, kita export slug mapping sederhana.
-
-    // NOTE: File JS 10MB agak berat dload di HP. 
-    // Better strategy: Frontend RECONSTRUCT title from slug.
-    // Slug: dog-grooming-near-blk-148-yishun-central
-    // Reconstruct: Dog Grooming Near Blk 148 Yishun Central
-    // Jadi kita TIDAK butuh database besar ini di frontend.
-    // Kita hanya butuh list lokasi untuk "Related Pages" link.
-
-    // Mari kita simpan list 'rawLocations' saja untuk fitur "Nearby Locations" di footer.
     const jsContent = `
 // GENERATED FILE - DO NOT EDIT MANUALLY
 export const pseoLocations = ${JSON.stringify(rawLocations)};
 `;
+    // assets/js is already handled in the config
     fs.writeFileSync(OUTPUT_LOCATIONS_JSON, jsContent);
     console.log(`✅ Frontend data written to: ${OUTPUT_LOCATIONS_JSON}`);
 
@@ -161,9 +154,12 @@ export const pseoLocations = ${JSON.stringify(rawLocations)};
 /cat-grooming-*  /pseo-template.html  200
 /pet-*           /pseo-template.html  200
 /rabbit-*        /pseo-template.html  200
+
+# Fix common underscores typos
+/grooming_packages.html  /grooming-packages.html  301
 `;
-    fs.writeFileSync('_redirects', redirectsContent); // For Netlify
-    console.log(`✅ Redirect rules created (Netlify style).`);
+    fs.writeFileSync('public/_redirects', redirectsContent); // For Netlify
+    console.log(`✅ Redirect rules created in public folder.`);
 
 }
 
